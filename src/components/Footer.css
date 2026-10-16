@@ -1,0 +1,214 @@
+.site-footer {
+  background: linear-gradient(
+    to bottom,
+    var(--color-footer-bg-start) 0%,
+    var(--color-footer-bg-end) 100%
+  );
+  color: var(--color-footer-text);
+  padding: 3.5rem 0 1.5rem 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 2.5rem;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright-block {
+  margin-bottom: 1.5rem;
+}
+
+.copyright-text {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #e5e5e5;
+  margin: 0;
+}
+
+.footer-line {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #e5e5e5;
+  margin: 0;
+}
+
+.footer-subheading {
+  margin: 0 0 0.85rem 0;
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+}
+
+.location-heading-main {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.location-heading-sub {
+  font-size: 14px;
+  font-weight: 400;
+  color: #d1d5db;
+}
+
+.footer-heading {
+  font-size: 17.5px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* Heading underlines under Contact: and Navigation: ~220px wide */
+.footer-header-line {
+  width: 220px;
+  max-width: 100%;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0.65rem 0 1.25rem 0;
+}
+
+/* Shift Contact column ~45px left and Navigation column ~10px left */
+.col-contact {
+  margin-left: -45px;
+}
+
+.col-nav {
+  margin-left: -10px;
+}
+
+.footer-list {
+  list-style: disc outside;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.branch-item {
+  font-size: 13px;
+  line-height: 24px;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.branch-name {
+  font-weight: 400;
+  color: #ffffff;
+  display: block;
+}
+
+.branch-address {
+  display: block;
+  padding-left: 0.85rem;
+  font-weight: 400;
+  color: #d1d5db;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+/* Contact column: Phone: and Email: labels in regular weight */
+.contact-group-title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 0.35rem 0;
+}
+
+.email-title {
+  margin-top: 1rem;
+}
+
+.footer-nested-list {
+  list-style: circle outside;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-nested-list li {
+  line-height: 24px;
+  font-size: 13px;
+}
+
+.nav-bullets {
+  list-style: disc outside;
+  padding-left: 1.2rem;
+  gap: 0;
+}
+
+.nav-bullets li {
+  line-height: 17.6px;
+  font-size: 13px;
+}
+
+/* Underline all links (phones, emails, navigation) in white */
+.footer-link {
+  font-size: 13px;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 2px;
+  transition: opacity var(--transition-fast);
+}
+
+.footer-link:hover {
+  opacity: 0.85;
+}
+
+/* Bottom Attribution - No top border, 16px bold, whole sentence underlined in white, link blue */
+.footer-bottom-attribution {
+  border-top: none;
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.attribution-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-color: #ffffff;
+  text-underline-offset: 3px;
+  margin: 0;
+}
+
+.attribution-link {
+  color: var(--color-footer-attribution);
+  text-decoration: underline;
+  text-decoration-color: var(--color-footer-attribution);
+  font-weight: 700;
+  transition: opacity var(--transition-fast);
+}
+
+.attribution-link:hover {
+  opacity: 0.85;
+}
+
+/* Responsive Footer */
+@media (max-width: 999px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .col-contact,
+  .col-nav {
+    margin-left: 0;
+  }
+
+  .footer-header-line {
+    width: 100%;
+  }
+}

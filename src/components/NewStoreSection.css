@@ -1,0 +1,103 @@
+.new-store-section {
+  padding: 23px 0 19px 0;
+  background-color: #ffffff;
+}
+
+.new-store-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+/* Left Column: Text-Fill with mid-grey gradient, Anton font */
+.store-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.store-clipped-heading {
+  margin: 0;
+  font-family: 'Anton', var(--font-condensed), sans-serif;
+  font-size: clamp(3rem, 10vw, 5.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  display: block;
+  background-image: url('../assets/images/letters-fill.jpg');
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+@media (min-width: 1000px) {
+  .store-clipped-heading {
+    font-size: 110px;
+    line-height: 96px;
+  }
+}
+
+.clipped-line {
+  display: block;
+}
+
+/* Right Column: Video 360x472px with ~160px bottom-right quarter circle radius, no shadow */
+.store-video-col {
+  display: flex;
+  justify-content: center;
+}
+
+.store-video-wrapper {
+  position: relative;
+  width: 360px;
+  max-width: 100%;
+  height: 472px;
+  border-radius: 90px 0 160px 0;
+  overflow: hidden;
+  box-shadow: none;
+  background-color: #e5e5e5;
+}
+
+.store-video-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 90px 0 160px 0;
+  border: none;
+  box-shadow: none;
+  background: linear-gradient(135deg, #e4e7eb 0%, #d1d6dc 100%);
+  color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 999px) {
+  .new-store-section {
+    padding: 2.5rem 0;
+  }
+
+  .new-store-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .store-text-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .store-video-wrapper {
+    width: 280px;
+    height: 367px;
+    border-radius: 70px 0 130px 0;
+  }
+
+  .store-video-placeholder {
+    border-radius: 70px 0 130px 0;
+  }
+}

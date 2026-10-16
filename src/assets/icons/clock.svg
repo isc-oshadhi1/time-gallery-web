@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-bbox="34 34 132 132" aria-labelledby="svgcid-z34tocoiu5xp" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="34 34 132 132" data-type="color">
+    <g>
+        <path fill="#5b2bbf" d="M100 166c-36.393 0-66-29.607-66-66s29.607-66 66-66 66 29.607 66 66-29.607 66-66 66zm0-126c-33.083 0-60 26.917-60 60s26.917 60 60 60 60-26.917 60-60-26.917-60-60-60z" data-color="1"/>
+        <path fill="#5b2bbf" d="M100 151c-28.122 0-51-22.878-51-51s22.878-51 51-51 51 22.878 51 51-22.878 51-51 51zm0-96c-24.813 0-45 20.187-45 45s20.187 45 45 45 45-20.187 45-45-20.187-45-45-45z" data-color="1"/>
+        <path d="M103 61v6h-6v-6h6z" fill="#5b2bbf" data-color="1"/>
+        <path d="M103 133v6h-6v-6h6z" fill="#5b2bbf" data-color="1"/>
+        <path d="M139 97v6h-6v-6h6z" fill="#5b2bbf" data-color="1"/>
+        <path d="M67 97v6h-6v-6h6z" fill="#5b2bbf" data-color="1"/>
+        <path fill="#5b2bbf" d="M118 103h-18a3 3 0 0 1-3-3V73h6v24h15v6z" data-color="1"/>
+    </g>
+</svg>

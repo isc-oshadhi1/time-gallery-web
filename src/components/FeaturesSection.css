@@ -1,0 +1,132 @@
+.features-section {
+  padding: 22px 0 3rem 0;
+  background-color: #ffffff;
+  width: 100%;
+  overflow-x: clip;
+}
+
+.features-grid {
+  display: grid;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 300px);
+    width: 960px;
+  }
+
+  .feature-column {
+    width: 300px;
+  }
+}
+
+/* Each column is a self-contained block stacked vertically */
+.feature-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature-icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 13px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.feature-icon-img {
+  width: 120px;
+  height: 120px;
+  display: block;
+  object-fit: contain;
+}
+
+.feature-heading {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 400;
+  color: #111111;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0;
+  line-height: 1.25;
+  text-transform: capitalize;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+}
+
+.feature-heading.no-letter-spacing {
+  letter-spacing: normal;
+}
+
+.feature-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #888888;
+  margin: 0.85rem 0 31px 0;
+}
+
+.feature-text {
+  font-family: var(--font-serif);
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666666;
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.feature-inline-link {
+  color: #666666;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 400;
+  transition: color var(--transition-fast);
+}
+
+.feature-inline-link:hover {
+  color: var(--color-feature-violet);
+}
+
+/* Below 1000px: 1 column, centered, max-width 520px, 40px vertical gap */
+@media (max-width: 999px) {
+  .features-section {
+    padding: 3rem 0;
+  }
+
+  .features-grid {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  .feature-column {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .feature-heading {
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  .feature-heading.no-letter-spacing {
+    white-space: normal;
+  }
+}

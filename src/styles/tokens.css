@@ -1,0 +1,63 @@
+:root {
+  /* Colors sampled from screenshots */
+  --color-primary-purple: #742070;
+  --color-primary-purple-hover: #5a1957;
+  --color-feature-violet: #5b2bbf;
+  --color-nav-active-bg: #4a4a4a;
+  --color-nav-active-text: #ffffff;
+  --color-ribbon-triangle: #000000;
+  
+  --color-hero-red: #ea1d24;
+  --color-hero-text: #ffffff;
+  
+  --color-card-title-blue: #044b9b;
+  --color-card-title-blue-hover: #033a78;
+  --color-card-bg: #f8f9fa;
+  --color-card-border: #e2e4e8;
+  --color-card-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+  --color-text-main: #2b2b2b;
+  --color-text-muted: #666666;
+  --color-text-light: #777777;
+  --color-border-light: #e0e0e0;
+  --color-divider-dark: #333333;
+
+  --color-estimate-bg-start: #f8f8f8;
+  --color-estimate-bg-end: #e8e8e8;
+  --color-estimate-border: #dedede;
+  --color-estimate-btn: #757575;
+  --color-estimate-btn-hover: #5a5a5a;
+
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #20ba5a;
+
+  --color-footer-bg-start: #4a4a4a;
+  --color-footer-bg-end: #1e1e1e;
+  --color-footer-text: #ffffff;
+  --color-footer-link: #ffffff;
+  --color-footer-link-hover: #e5e5e5;
+  --color-footer-attribution: #38bdf8;
+
+  --color-social-icon: #b5b5b5;
+  --color-social-icon-hover: #666666;
+
+  /* Typography */
+  --font-condensed: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-sans: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+
+  /* Layout */
+  --container-max-width: 960px;
+  --container-wide-max-width: 1140px;
+  --container-padding: 1rem;
+  
+  /* Shadows */
+  --shadow-nav: 0 4px 10px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-estimate: 0 10px 28px rgba(0, 0, 0, 0.16);
+  --shadow-floating: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s ease-in-out;
+}
