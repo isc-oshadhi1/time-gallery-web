@@ -24,7 +24,6 @@
   }
 }
 
-/* Each column is a self-contained block stacked vertically */
 .feature-column {
   display: flex;
   flex-direction: column;
@@ -99,7 +98,6 @@
   color: var(--color-feature-violet);
 }
 
-/* Below 1000px: 1 column, centered, max-width 520px, 40px vertical gap */
 @media (max-width: 999px) {
   .features-section {
     padding: 3rem 0;

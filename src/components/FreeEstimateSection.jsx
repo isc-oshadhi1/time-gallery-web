@@ -1,6 +1,5 @@
 import './FreeEstimateSection.css';
 
-// Constants
 const ESTIMATE_DATA = {
   heading: 'NO OBLIGATION FREE ESTIMATE',
   paragraph1Line1:

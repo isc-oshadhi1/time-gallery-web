@@ -74,7 +74,7 @@
   max-height: 140px;
 }
 
-/* Responsive: 4 -> 2 -> 1 */
+/* Responsive */
 @media (max-width: 1179px) and (min-width: 600px) {
   .service-cards-grid {
     grid-template-columns: repeat(2, 270px);

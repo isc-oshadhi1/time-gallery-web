@@ -5,7 +5,7 @@
     var(--color-footer-bg-end) 100%
   );
   color: var(--color-footer-text);
-  padding: 3.5rem 0 1.5rem 0;
+  padding: 26px 0 8px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   position: relative;
@@ -16,7 +16,7 @@
   display: grid;
   grid-template-columns: 1.25fr 1fr 1fr;
   gap: 3rem;
-  padding-bottom: 2.5rem;
+  padding-bottom: 1rem;
 }
 
 .footer-col {
@@ -24,12 +24,17 @@
   flex-direction: column;
 }
 
+/* Column 1 */
+.col-info {
+  margin-left: 34px;
+}
+
 .copyright-block {
   margin-bottom: 1.5rem;
 }
 
 .copyright-text {
-  font-size: 12px;
+  font-size: 11px;
   line-height: 1.5;
   color: #e5e5e5;
   margin: 0;
@@ -42,48 +47,71 @@
   margin: 0;
 }
 
+/* Shop location */
 .footer-subheading {
-  margin: 0 0 0.85rem 0;
+  margin: -6px 0 0.85rem -14px;
   display: flex;
   align-items: baseline;
   gap: 0.45rem;
 }
 
 .location-heading-main {
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 400;
   color: #ffffff;
 }
 
 .location-heading-sub {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   color: #d1d5db;
 }
 
+/* Headings */
 .footer-heading {
-  font-size: 17.5px;
+  font-size: 16px;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
 }
 
-/* Heading underlines under Contact: and Navigation: ~220px wide */
 .footer-header-line {
   width: 220px;
   max-width: 100%;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.4);
-  margin: 0.65rem 0 1.25rem 0;
+  height: 2px;
+  background-color: #aaaaaa;
+  margin: 0.9rem 0 1.25rem 0;
 }
 
-/* Shift Contact column ~45px left and Navigation column ~10px left */
+/* Contact column */
 .col-contact {
-  margin-left: -45px;
+  margin-left: -63px;
 }
 
+/* Contact heading text */
+.col-contact .footer-heading {
+  margin-left: 42px;
+}
+
+.col-contact .contact-section {
+  margin-left: 42px;
+}
+
+/* Navigation column */
 .col-nav {
   margin-left: -10px;
+}
+
+.col-nav .footer-heading {
+  margin-left: 22px;
+}
+
+.col-nav .footer-header-line {
+  margin-left: -7px;
+}
+
+.col-nav .nav-bullets {
+  margin-left: 10px;
 }
 
 .footer-list {
@@ -94,11 +122,18 @@
   flex-direction: column;
 }
 
+/* Branch items */
 .branch-item {
   font-size: 13px;
   line-height: 24px;
   color: #d1d5db;
   margin-bottom: 0.5rem;
+  margin-left: -10px;
+  margin-top: -15px;
+}
+
+.branch-item:first-child {
+  margin-top: 0;
 }
 
 .branch-name {
@@ -107,31 +142,52 @@
   display: block;
 }
 
+/* Address */
 .branch-address {
   display: block;
-  padding-left: 0.85rem;
+  padding-left: 0.45rem;
   font-weight: 400;
   color: #d1d5db;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 24px;
+  max-width: 260px;
 }
 
-/* Contact column: Phone: and Email: labels in regular weight */
+/* Contact list */
+.footer-contact-main-list {
+  list-style: disc outside;
+  padding-left: 1.2rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-main-item {
+  color: #ffffff;
+  font-size: 13px;
+  line-height: 24px;
+}
+
 .contact-group-title {
   font-size: 13px;
   font-weight: 400;
   color: #ffffff;
-  margin: 0 0 0.35rem 0;
+}
+
+/* Email */
+.email-main-item {
+  margin-top: -9px;
 }
 
 .email-title {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .footer-nested-list {
   list-style: circle outside;
   padding-left: 1.2rem;
-  margin: 0;
+  margin: 0.15rem 0 0 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -153,24 +209,26 @@
   font-size: 13px;
 }
 
-/* Underline all links (phones, emails, navigation) in white */
+/* Underline all links (phones, emails, navigation) in white; #5ab4ff on hover */
 .footer-link {
   font-size: 13px;
   color: #ffffff;
   text-decoration: underline;
   text-decoration-color: #ffffff;
   text-underline-offset: 2px;
-  transition: opacity var(--transition-fast);
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
 }
 
-.footer-link:hover {
-  opacity: 0.85;
+.footer-link:hover,
+.footer-link:focus-visible {
+  color: #5ab4ff;
+  text-decoration-color: #5ab4ff;
 }
 
-/* Bottom Attribution - No top border, 16px bold, whole sentence underlined in white, link blue */
+/* Bottom Attribution */
 .footer-bottom-attribution {
   border-top: none;
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
   text-align: center;
 }
 
@@ -203,12 +261,34 @@
     gap: 2rem;
   }
 
+  .col-info {
+    margin-left: 0;
+  }
+
   .col-contact,
   .col-nav {
     margin-left: 0;
   }
 
+  .col-contact .footer-heading,
+  .col-contact .contact-section {
+    margin-left: 0;
+  }
+
   .footer-header-line {
     width: 100%;
+  }
+
+  .footer-subheading {
+    margin-left: 0;
+  }
+
+  .branch-item {
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  .email-main-item {
+    margin-top: 0;
   }
 }

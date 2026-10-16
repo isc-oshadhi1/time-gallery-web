@@ -10,7 +10,7 @@
   gap: 2.5rem;
 }
 
-/* Left Column: Text-Fill with mid-grey gradient, Anton font */
+/* Left Column */
 .store-text-col {
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
   display: block;
 }
 
-/* Right Column: Video 360x472px with ~160px bottom-right quarter circle radius, no shadow */
+/* Right Column */
 .store-video-col {
   display: flex;
   justify-content: center;

@@ -1,7 +1,6 @@
 import MediaPlaceholder from './MediaPlaceholder';
 import './HeroSection.css';
 
-// Constants
 const HERO_CONTENT = {
   heading: 'Watch Repairs',
   paragraphLines: [
@@ -27,7 +26,6 @@ export default function HeroSection() {
           className="hero-media"
           style={{ width: '100%', height: '100%' }}
         />
-        {/* Subtle dark overlay reduced to ~8-10% so the bright video shows */}
         <div className="hero-overlay" aria-hidden="true" />
       </div>
 

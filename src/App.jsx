@@ -1,29 +1,35 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import Home from './pages/Home';
+import About from './pages/About';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="app-root">
-        {/* Reusable Header on every page */}
         <Header />
 
-        {/* Routes */}
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* Unknown routes show simple "Page coming soon" placeholder */}
+          <Route path="/about" element={<About />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 
-        {/* Reusable Footer on every page */}
         <Footer />
-
-        {/* Floating action buttons (Let's Chat & WhatsApp) */}
         <FloatingButtons />
       </div>
     </BrowserRouter>

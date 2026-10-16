@@ -1,5 +1,3 @@
-// TODO: Consider converting these large animated GIFs (service-polishing.gif is ~12MB, service-battery.gif is ~5.1MB)
-// to short looping MP4 video elements for significant performance and bandwidth improvements.
 import repairsGif from '../assets/images/service-repairs.gif';
 import ourServicesGif from '../assets/images/service-our-services.gif';
 import polishingGif from '../assets/images/service-polishing.gif';
@@ -7,7 +5,6 @@ import batteryGif from '../assets/images/service-battery.gif';
 import MediaPlaceholder from './MediaPlaceholder';
 import './ServiceCardsSection.css';
 
-// Constants
 const SERVICE_CARDS = [
   {
     id: 'repairs-servicing',

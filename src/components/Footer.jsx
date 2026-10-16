@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
-// Constants at the top of the component
 const FOOTER_DATA = {
   copyrightTitle: 'Copyright © 2022 by Thetimegallery W.L.L',
   copyrightSubtitle: 'All rights reserved.',
@@ -73,30 +72,36 @@ export default function Footer() {
 
           {/* Column 2: Contact */}
           <div className="footer-col col-contact">
-            <h3 className="footer-heading">{FOOTER_DATA.contactHeading}</h3>
+            <h3 className="footer-heading contact-heading">{FOOTER_DATA.contactHeading}</h3>
             <div className="footer-header-line" aria-hidden="true" />
 
             <div className="contact-section">
-              <p className="contact-group-title">Phone :</p>
-              <ul className="footer-nested-list">
-                {FOOTER_DATA.phones.map((phone) => (
-                  <li key={phone.label}>
-                    <a href={phone.href} className="footer-link">
-                      {phone.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <ul className="footer-contact-main-list">
+                <li className="contact-main-item">
+                  <span className="contact-group-title">Phone :</span>
+                  <ul className="footer-nested-list">
+                    {FOOTER_DATA.phones.map((phone) => (
+                      <li key={phone.label}>
+                        <a href={phone.href} className="footer-link">
+                          {phone.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
 
-              <p className="contact-group-title email-title">Email :</p>
-              <ul className="footer-nested-list">
-                {FOOTER_DATA.emails.map((email) => (
-                  <li key={email.label}>
-                    <a href={email.href} className="footer-link">
-                      {email.label}
-                    </a>
-                  </li>
-                ))}
+                <li className="contact-main-item email-main-item">
+                  <span className="contact-group-title email-title">Email :</span>
+                  <ul className="footer-nested-list">
+                    {FOOTER_DATA.emails.map((email) => (
+                      <li key={email.label}>
+                        <a href={email.href} className="footer-link">
+                          {email.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </li>
               </ul>
             </div>
           </div>
@@ -119,7 +124,6 @@ export default function Footer() {
         </div>
 
         {/* Bottom Attribution */}
-        {/* TODO: confirm with lead whether to keep this attribution line */}
         <div className="footer-bottom-attribution">
           <p className="attribution-text">
             {FOOTER_DATA.attribution.prefix}

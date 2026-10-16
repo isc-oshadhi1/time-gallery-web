@@ -3,7 +3,6 @@ import rosetteIcon from '../assets/icons/rosette.svg';
 import clockIcon from '../assets/icons/clock.svg';
 import './FeaturesSection.css';
 
-// Constants
 const FEATURES_DATA = [
   {
     id: 'expert-repairs',
