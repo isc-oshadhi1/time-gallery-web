@@ -9,12 +9,12 @@ const FOOTER_DATA = {
     {
       id: 'branch-1',
       name: 'Branch 1:',
-      address: 'Royal plaza, ground floor, Al sadd, Doha Qatar',
+      lines: ['Royal plaza, ground floor, Al sadd,', 'Doha Qatar'],
     },
     {
       id: 'branch-2',
       name: 'Branch 2:',
-      address: 'Shop no G5, Al Markiya street, Tawar Mall, Doha Qatar',
+      lines: ['Shop no G5, Al Markiya street, Tawar Mall,', 'Doha Qatar'],
     },
   ],
   contactHeading: 'Contact:',
@@ -63,7 +63,13 @@ export default function Footer() {
                 {FOOTER_DATA.branches.map((branch) => (
                   <li key={branch.id} className="footer-list-item branch-item">
                     <span className="branch-name">{branch.name}</span>
-                    <span className="branch-address">{branch.address}</span>
+                    <span className="branch-address">
+                      {branch.lines.map((line, idx) => (
+                        <span key={idx} className="branch-address-line">
+                          {line}
+                        </span>
+                      ))}
+                    </span>
                   </li>
                 ))}
               </ul>

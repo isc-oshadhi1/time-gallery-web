@@ -103,9 +103,9 @@ export default function Header() {
               alt="The Time Gallery W.L.L"
               label="THE TIME GALLERY W.L.L"
               className="logo-placeholder"
-              width="290"
-              height="94"
-              style={{ width: '290px', height: '94px' }}
+              width="308"
+              height="104"
+              style={{ width: '308px', height: '104px' }}
             />
           </Link>
         </div>

@@ -20,16 +20,16 @@
 .header-social-bar {
   display: flex;
   align-items: center;
-  gap: 21px;
+  gap: 24px;
 }
 
 .social-icon-link {
-  color: #7a7a7a !important;
+  color: #999999 !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
   transition: color 0.15s ease-in-out, transform var(--transition-fast);
 }
 
@@ -41,25 +41,26 @@
 
 @media (min-width: 1000px) {
   .header-inner {
-    width: 980px;
+    width: 980px !important;
+    max-width: 980px !important;
     padding: 0;
   }
 
-  /* Logo */
+  /* Logo – original: 308×104, margin-top 16px, left 0px within 980px container */
   .header-logo-area {
     position: absolute;
-    top: 18px;
-    left: 4px;
-    width: 290px;
-    height: 94px;
+    top: 16px;
+    left: 0px;
+    width: 308px;
+    height: 104px;
     padding: 0;
     z-index: 10;
   }
 
   .logo-placeholder {
-    width: 290px;
-    height: 94px;
-    object-fit: contain;
+    width: 308px !important;
+    height: 104px !important;
+    object-fit: fill;
     display: block;
   }
 
@@ -67,36 +68,41 @@
     position: static;
   }
 
-  /* Social icons */
+  /* Social icons – scale to 86% (Instagram 37px wide), 61px center spacing, move 9px left, same vertical center */
   .header-social-bar {
     position: absolute;
-    top: 21px;
-    right: 2px;
-    gap: 21px;
+    top: 21.5px;
+    right: 9px;
+    gap: 24px;
     padding: 0;
     z-index: 10;
   }
 
   .social-icon-link {
-    width: 40px;
-    height: 40px;
+    width: 37px;
+    height: 37px;
   }
 
-  /* Navigation bar */
+  .social-icon-link svg {
+    width: 37px;
+    height: 37px;
+  }
+
+  /* Navigation bar – original: left 264px, width 708px, height 41px */
   .header-nav-wrapper {
     position: absolute;
-    top: 106px;
-    right: 7px;
-    width: 709px;
+    top: 112px;
+    left: 264px;
+    width: 708px;
     height: 41px;
     z-index: 20;
   }
 
   .nav-ribbon {
-    width: 709px;
+    width: 708px;
     height: 41px;
     background-color: #f1f1f1;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.7);
     position: relative;
     display: flex;
     align-items: center;
@@ -138,7 +144,7 @@
     margin: 0;
     padding: 0;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: flex-start;
   }
 
   .nav-item {
@@ -151,15 +157,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 24px;
+    padding: 0 23px;
     font-family: var(--font-semi-condensed);
     font-weight: 700;
-    font-size: 14.5px;
+    font-size: 14.8px;
     letter-spacing: 0.01em;
-    color: var(--color-primary-purple);
+    color: #882692;
     text-decoration: none;
     white-space: nowrap;
-    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: background-color 0.4s ease, color 0.4s ease;
     border: none;
     background: none;
     cursor: pointer;
@@ -167,28 +173,33 @@
     box-sizing: border-box;
   }
 
-  /* Hover */
+  .nav-item:first-child .nav-link {
+    padding-left: 25px;
+    padding-right: 23px;
+  }
+
+  /* Hover – original: --bgh: 247,9,19 = #F70913 */
   .nav-link:hover,
   .nav-link:focus-visible {
-    background-color: #7a7a7a;
+    background-color: #F70913;
     color: #ffffff;
   }
 
   .has-dropdown:hover > .dropdown-toggle,
   .has-dropdown:focus-within > .dropdown-toggle {
-    background-color: #7a7a7a;
+    background-color: #F70913;
     color: #ffffff;
   }
 
-  /* Active */
+  /* Active/Selected – original: --bgs: 96,94,93 = #605E5D */
   .nav-link.active {
-    background-color: #5a5a5a;
+    background-color: #605E5D;
     color: #ffffff;
   }
 
   .nav-link.active:hover,
   .nav-link.active:focus-visible {
-    background-color: #5a5a5a;
+    background-color: #605E5D;
     color: #ffffff;
   }
 }
@@ -238,14 +249,14 @@
   font-family: var(--font-sans);
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--color-primary-purple);
+  color: #882692;
   text-decoration: none;
   transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
 }
 
 .dropdown-link:hover,
 .dropdown-link:focus-visible {
-  background-color: #7a7a7a;
+  background-color: #F70913;
   color: #ffffff;
 }
 
@@ -265,7 +276,7 @@
 .hamburger-bar {
   width: 100%;
   height: 3px;
-  background-color: var(--color-primary-purple);
+  background-color: #882692;
   border-radius: 2px;
   transition: all var(--transition-fast);
 }
@@ -322,8 +333,8 @@
     padding: 0.75rem 1.25rem;
     font-family: var(--font-semi-condensed);
     font-weight: 700;
-    font-size: 14.5px;
-    color: var(--color-primary-purple);
+    font-size: 14px;
+    color: #882692;
     text-decoration: none;
     background: none;
     border: none;
@@ -333,12 +344,12 @@
 
   .nav-link:hover,
   .nav-link:focus-visible {
-    background-color: #7a7a7a;
+    background-color: #F70913;
     color: #ffffff;
   }
 
   .nav-link.active {
-    background-color: #5a5a5a;
+    background-color: #605E5D;
     color: #ffffff;
   }
 

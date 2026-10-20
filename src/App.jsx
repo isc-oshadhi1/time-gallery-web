@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
 import Home from './pages/Home';
 import About from './pages/About';
+import WatchRepairsServicing from './pages/WatchRepairsServicing';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -26,6 +27,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/watch-repairs-servicing" element={<WatchRepairsServicing />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 

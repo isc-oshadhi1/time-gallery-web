@@ -5,7 +5,7 @@
     var(--color-footer-bg-end) 100%
   );
   color: var(--color-footer-text);
-  padding: 26px 0 8px 0;
+  padding: 27px 0 8px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   position: relative;
@@ -27,17 +27,21 @@
 /* Column 1 */
 .col-info {
   margin-left: 34px;
+  width: 226px;
 }
 
 .copyright-block {
-  margin-bottom: 1.5rem;
+  width: 226px;
+  margin-bottom: 22px;
 }
 
 .copyright-text {
   font-size: 11px;
-  line-height: 1.5;
+  line-height: 21px;
   color: #e5e5e5;
   margin: 0;
+  width: 226px;
+  white-space: nowrap;
 }
 
 .footer-line {
@@ -47,24 +51,34 @@
   margin: 0;
 }
 
-/* Shop location */
+/* Shop location: center at 98, 14px further left (via col-info), 119 wide */
+.location-block {
+  margin-top: 0;
+}
+
 .footer-subheading {
-  margin: -6px 0 0.85rem -14px;
+  margin: 0 0 10px 0;
   display: flex;
   align-items: baseline;
   gap: 0.45rem;
+  height: 20px;
+  line-height: 20px;
 }
 
 .location-heading-main {
   font-size: 18px;
   font-weight: 400;
   color: #ffffff;
+  width: 119px;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .location-heading-sub {
   font-size: 13px;
   font-weight: 400;
   color: #d1d5db;
+  white-space: nowrap;
 }
 
 /* Headings */
@@ -73,14 +87,15 @@
   font-weight: 700;
   color: #ffffff;
   margin: 0;
+  line-height: 24px;
+  height: 24px;
 }
 
 .footer-header-line {
-  width: 220px;
+  width: 219px;
   max-width: 100%;
   height: 2px;
   background-color: #aaaaaa;
-  margin: 0.9rem 0 1.25rem 0;
 }
 
 /* Contact column */
@@ -88,9 +103,16 @@
   margin-left: -63px;
 }
 
-/* Contact heading text */
+/* Contact heading text moves 3px left (63 - 3 = 60) */
 .col-contact .footer-heading {
-  margin-left: 42px;
+  margin-left: 60px;
+}
+
+/* Underline moves 42px left (63 - 42 = 21) and 4px down (center 69 below footer top) */
+.col-contact .footer-header-line {
+  margin-left: 21px;
+  margin-top: 17.5px;
+  margin-bottom: 12px;
 }
 
 .col-contact .contact-section {
@@ -106,8 +128,11 @@
   margin-left: 22px;
 }
 
+/* Underline moves 4px down (center 69) */
 .col-nav .footer-header-line {
   margin-left: -7px;
+  margin-top: 17.5px;
+  margin-bottom: 8px;
 }
 
 .col-nav .nav-bullets {
@@ -122,35 +147,44 @@
   flex-direction: column;
 }
 
-/* Branch items */
+/* Branch items:
+   Branch 1 center 126, address centers 150 & 174.
+   Branch 2 center 197, address centers 221 & 244.
+   Addresses 27px further left (padding-left: 3px instead of 30px). */
 .branch-item {
   font-size: 13px;
-  line-height: 24px;
   color: #d1d5db;
-  margin-bottom: 0.5rem;
-  margin-left: -10px;
-  margin-top: -15px;
+  margin-left: 4px;
+  margin-top: -4px;
+  margin-bottom: 0;
 }
 
-.branch-item:first-child {
-  margin-top: 0;
+.branch-item + .branch-item {
+  margin-top: -1px;
 }
 
 .branch-name {
   font-weight: 400;
   color: #ffffff;
   display: block;
+  height: 24px;
+  line-height: 24px;
 }
 
 /* Address */
 .branch-address {
   display: block;
-  padding-left: 0.45rem;
+  padding-left: 3px;
   font-weight: 400;
   color: #d1d5db;
   font-size: 13px;
+}
+
+.branch-address-line {
+  display: block;
+  height: 24px;
   line-height: 24px;
-  max-width: 260px;
+  white-space: nowrap;
 }
 
 /* Contact list */
@@ -160,34 +194,39 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0;
 }
 
 .contact-main-item {
   color: #ffffff;
   font-size: 13px;
-  line-height: 24px;
 }
 
 .contact-group-title {
   font-size: 13px;
   font-weight: 400;
   color: #ffffff;
+  display: block;
+  height: 23px;
+  line-height: 23px;
 }
 
 /* Email */
 .email-main-item {
-  margin-top: -9px;
+  margin-top: -1px;
 }
 
 .email-title {
   margin-top: 0;
+  display: block;
+  height: 24px;
+  line-height: 24px;
 }
 
 .footer-nested-list {
   list-style: circle outside;
   padding-left: 1.2rem;
-  margin: 0.15rem 0 0 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -195,21 +234,32 @@
 
 .footer-nested-list li {
   line-height: 24px;
+  height: 24px;
   font-size: 13px;
 }
 
+.email-main-item .footer-nested-list li {
+  line-height: 23px;
+  height: 23px;
+}
+
+/* Navigation bullets */
 .nav-bullets {
   list-style: disc outside;
   padding-left: 1.2rem;
+  margin: 3.5px 0 0 0;
+  display: flex;
+  flex-direction: column;
   gap: 0;
 }
 
 .nav-bullets li {
-  line-height: 17.6px;
+  line-height: 17.5px;
+  height: 17.5px;
   font-size: 13px;
 }
 
-/* Underline all links (phones, emails, navigation) in white; #5ab4ff on hover */
+/* Underline all links in white */
 .footer-link {
   font-size: 13px;
   color: #ffffff;
@@ -263,6 +313,16 @@
 
   .col-info {
     margin-left: 0;
+    width: 100%;
+  }
+
+  .copyright-block {
+    width: 100%;
+  }
+
+  .copyright-text {
+    width: 100%;
+    white-space: normal;
   }
 
   .col-contact,
@@ -275,7 +335,9 @@
     margin-left: 0;
   }
 
-  .footer-header-line {
+  .col-contact .footer-header-line,
+  .col-nav .footer-header-line {
+    margin-left: 0;
     width: 100%;
   }
 
@@ -286,6 +348,10 @@
   .branch-item {
     margin-left: 0;
     margin-top: 0;
+  }
+
+  .branch-address-line {
+    white-space: normal;
   }
 
   .email-main-item {
