@@ -72,7 +72,7 @@
   .header-social-bar {
     position: absolute;
     top: 21.5px;
-    right: 9px;
+    right: 14px;
     gap: 24px;
     padding: 0;
     z-index: 10;
@@ -88,10 +88,10 @@
     height: 37px;
   }
 
-  /* Navigation bar – original: left 264px, width 708px, height 41px */
+  /* Navigation bar – original: left 264px, width 708px, height 41px, top 106px */
   .header-nav-wrapper {
     position: absolute;
-    top: 112px;
+    top: 106px;
     left: 264px;
     width: 708px;
     height: 41px;
@@ -173,9 +173,35 @@
     box-sizing: border-box;
   }
 
-  .nav-item:first-child .nav-link {
+  .nav-item:nth-child(1) .nav-link {
     padding-left: 25px;
-    padding-right: 23px;
+    padding-right: 23.7px;
+  }
+
+  .nav-item:nth-child(2) .nav-link {
+    padding-left: 23.6px;
+    padding-right: 23.8px;
+  }
+
+  .nav-item:nth-child(3) .nav-link {
+    padding-left: 23.7px;
+    padding-right: 23.7px;
+  }
+
+  .nav-item:nth-child(4) .nav-link,
+  .nav-item:nth-child(4) .dropdown-toggle {
+    padding-left: 23.75px;
+    padding-right: 24px;
+  }
+
+  .nav-item:nth-child(5) .nav-link {
+    padding-left: 24px;
+    padding-right: 23.5px;
+  }
+
+  .nav-item:nth-child(6) .nav-link {
+    padding-left: 23.6px;
+    padding-right: 20px;
   }
 
   /* Hover – original: --bgh: 247,9,19 = #F70913 */

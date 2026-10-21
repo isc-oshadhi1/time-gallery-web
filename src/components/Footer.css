@@ -5,7 +5,7 @@
     var(--color-footer-bg-end) 100%
   );
   color: var(--color-footer-text);
-  padding: 27px 0 8px 0;
+  padding: 27px 0 11px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   position: relative;
@@ -32,11 +32,12 @@
 
 .copyright-block {
   width: 226px;
+  margin-left: 14px;
   margin-bottom: 22px;
 }
 
-.copyright-text {
-  font-size: 11px;
+.copyright-block .copyright-text {
+  font-size: 12.03px;
   line-height: 21px;
   color: #e5e5e5;
   margin: 0;
@@ -171,10 +172,10 @@
   line-height: 24px;
 }
 
-/* Address */
+/* Address (14px further right) */
 .branch-address {
   display: block;
-  padding-left: 3px;
+  padding-left: 17px;
   font-weight: 400;
   color: #d1d5db;
   font-size: 13px;
@@ -275,10 +276,10 @@
   text-decoration-color: #5ab4ff;
 }
 
-/* Bottom Attribution */
+/* Bottom Attribution: center 306px below footer top */
 .footer-bottom-attribution {
   border-top: none;
-  padding-top: 0.5rem;
+  padding-top: 21px;
   text-align: center;
 }
 

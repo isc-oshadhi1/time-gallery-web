@@ -6,6 +6,8 @@ import FloatingButtons from './components/FloatingButtons';
 import Home from './pages/Home';
 import About from './pages/About';
 import WatchRepairsServicing from './pages/WatchRepairsServicing';
+import BrandRepairPage from './pages/BrandRepairPage';
+import rolexData from './data/brands/rolex';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -28,6 +30,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/watch-repairs-servicing" element={<WatchRepairsServicing />} />
+          <Route path="/rolex-watch-repair" element={<BrandRepairPage brand={rolexData} />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 
