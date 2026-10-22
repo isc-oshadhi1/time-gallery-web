@@ -1,12 +1,4 @@
-import bannerImg from '../../assets/images/brands/rolex/banner-sky-dweller.jpg';
-import repairImg from '../../assets/images/brands/rolex/repair.jpg';
-import refurbishmentImg from '../../assets/images/brands/rolex/refurbishment-polish.jpg';
-import watchServiceImg from '../../assets/images/brands/rolex/watch-service.jpg';
-import crownReplacementImg from '../../assets/images/brands/rolex/crown-replacement.jpg';
-import batteryReplacementImg from '../../assets/images/brands/rolex/battery-replacement.jpg';
-import sapphirePlexiGlassImg from '../../assets/images/brands/rolex/sapphire-plexi-glass.jpg';
-import replacementDialImg from '../../assets/images/brands/rolex/replacement-dial.jpg';
-import braceletStrapsImg from '../../assets/images/brands/rolex/bracelet-straps.jpg';
+import { getBrandImage } from '../../utils/brandImages';
 
 export const rolexData = {
   slug: 'rolex',
@@ -14,14 +6,41 @@ export const rolexData = {
   pageTitle: 'Rolex Watch Repair | Thetimegallery',
   banner: {
     videoSrc: '/videos/about-banner.mp4',
-    imageSrc: bannerImg,
+    imageSrc: getBrandImage('rolex', 'banner'),
     heading: 'Rolex Watch Repair',
+  },
+  layout: {
+    bannerWidth: 1100,
+    bannerHeight: 242,
+    bannerVideoWidth: 458,
+    bannerOffsetCenter: 4,
+    bannerTitle: 'Rolex Watch Repair',
+    gapBannerToCard1: 54,
+    bodyContainerWidth: 1100,
+    bodyPaddingLeft: 55,
+    bodyPaddingRight: 54,
+    bodyOffsetCenter: 4,
+    cardHeights: [238, 236, 236, 236, 258, 236, 237, 258],
+    cardGaps: [20, 25, 38, 24, 24, 26, 26, 0],
+    gapLastCardToFooter: 20,
+    blockAHeadingTopOffset: 10,
+    blockAHeadingPaddingTop: 3.5,
+    gapParaToWhyMarginTop: 46.2,
+    gapWhyToModelsMarginTop: 49.2,
+    modelsLine1Width: 443,
+    gapEmergencyToRepairsMarginTop: 53.25,
+    repairsHeadingWidth: 332,
+    blockBMarginTop: 123.2,
+    blockBOffsetLeft: 0,
+    buttonWrapperMarginTop: 11.2,
+    buttonOffsetLeft: 0,
   },
   cards: [
     {
       id: 'rolex-repair',
+      baseName: 'repair',
       title: 'Rolex Repair',
-      image: repairImg,
+      image: getBrandImage('rolex', 'repair'),
       alt: 'Rolex repair',
       minHeight: 238,
       gapBottom: 20,
@@ -31,8 +50,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-refurbishment-polish',
+      baseName: 'refurbishment-polish',
       title: 'Rolex Refurbishment & Polish',
-      image: refurbishmentImg,
+      image: getBrandImage('rolex', 'refurbishment-polish'),
       alt: 'Rolex Refurbishment & Polish',
       minHeight: 236,
       gapBottom: 25,
@@ -42,8 +62,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-watch-service',
+      baseName: 'watch-service',
       title: 'Rolex Watch Service',
-      image: watchServiceImg,
+      image: getBrandImage('rolex', 'watch-service'),
       alt: 'Rolex Watch Service',
       minHeight: 236,
       gapBottom: 38,
@@ -53,8 +74,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-crown-replacement',
+      baseName: 'crown-replacement',
       title: 'Rolex Crown Replacement',
-      image: crownReplacementImg,
+      image: getBrandImage('rolex', 'crown-replacement'),
       alt: 'Rolex Crown Replacement',
       minHeight: 236,
       gapBottom: 24,
@@ -64,8 +86,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-battery-replacement',
+      baseName: 'battery-replacement',
       title: 'Rolex Watch Battery Replacement',
-      image: batteryReplacementImg,
+      image: getBrandImage('rolex', 'battery-replacement'),
       alt: 'Rolex Watch Battery Replacement',
       minHeight: 258,
       gapBottom: 24,
@@ -75,8 +98,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-sapphire-plexi-glass',
+      baseName: 'sapphire-plexi-glass',
       title: 'Rolex Replacement Sapphire & Plexi Glass',
-      image: sapphirePlexiGlassImg,
+      image: getBrandImage('rolex', 'sapphire-plexi-glass'),
       alt: 'Rolex Replacement Sapphire & Plexi Glass',
       minHeight: 236,
       gapBottom: 26,
@@ -86,8 +110,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-replacement-dial',
+      baseName: 'replacement-dial',
       title: 'Rolex Replacement Dial',
-      image: replacementDialImg,
+      image: getBrandImage('rolex', 'replacement-dial'),
       alt: 'Rolex Replacement Dial',
       minHeight: 237,
       gapBottom: 26,
@@ -97,8 +122,9 @@ export const rolexData = {
     },
     {
       id: 'rolex-bracelet-straps',
+      baseName: 'bracelet-straps',
       title: 'Rolex Replacement Bracelet & Straps',
-      image: braceletStrapsImg,
+      image: getBrandImage('rolex', 'bracelet-straps'),
       alt: 'Rolex Replacement Bracelet & Straps',
       minHeight: 258,
       gapBottom: 0,

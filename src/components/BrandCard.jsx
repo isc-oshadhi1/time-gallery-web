@@ -1,30 +1,29 @@
 import MediaPlaceholder from './MediaPlaceholder';
+import { getBrandImage } from '../utils/brandImages';
 import './BrandCard.css';
 
 /**
  * BrandCard – renders an individual brand service offering card.
  * @param {Object} props
  * @param {Object} props.card - Card data object
- * @param {string} props.card.id
- * @param {string} props.card.title
- * @param {string} [props.card.image]
- * @param {string} props.card.alt
- * @param {number} [props.card.minHeight]
- * @param {number} [props.card.gapBottom]
- * @param {number} [props.card.photoTop]
- * @param {string} props.card.description
+ * @param {string} [props.brandSlug] - Brand slug for resolving dynamic images
  */
-export default function BrandCard({ card }) {
+export default function BrandCard({ card, brandSlug }) {
   const {
     id,
     title,
     image,
+    baseName,
     alt,
     minHeight = 236,
     gapBottom = 24,
     photoTop = 37,
+    titleLineHeight,
     description,
   } = card;
+
+  const resolvedImage =
+    image || (brandSlug && baseName ? getBrandImage(brandSlug, baseName) : null);
 
   return (
     <article
@@ -34,13 +33,14 @@ export default function BrandCard({ card }) {
         '--card-min-height': `${minHeight}px`,
         '--card-gap-bottom': `${gapBottom}px`,
         '--photo-top': `${photoTop}px`,
+        ...(titleLineHeight ? { '--card-title-line-height': `${titleLineHeight}px` } : {}),
       }}
     >
       {/* Photo frame: near-white 174x163 frame with 144x144 photo */}
       <div className="brand-card__photo-frame">
-        {image ? (
+        {resolvedImage ? (
           <img
-            src={image}
+            src={resolvedImage}
             alt={alt || title}
             className="brand-card__photo"
             width="144"

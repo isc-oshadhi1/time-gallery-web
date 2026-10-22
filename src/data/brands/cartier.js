@@ -1,0 +1,188 @@
+import { getBrandImage } from '../../utils/brandImages';
+
+export const cartierData = {
+  slug: 'cartier',
+  brandName: 'Cartier',
+  pageTitle: 'Cartier Watch Repair | Thetimegallery',
+  banner: {
+    videoSrc: '/videos/about-banner.mp4',
+    imageSrc: getBrandImage('cartier', 'banner'),
+    heading: 'Cartier Watch Repair',
+  },
+  layout: {
+    bannerWidth: 1146,
+    bannerHeight: 234,
+    bannerVideoWidth: 444,
+    bannerOffsetCenter: -8,
+    bannerTitle: null,
+    gapBannerToCard1: 57,
+    bodyContainerWidth: 1146,
+    bodyPaddingLeft: 90,
+    bodyPaddingRight: 45,
+    bodyOffsetCenter: -8,
+    cardHeights: [236, 236, 236, 236, 258, 236, 236, 258],
+    cardGaps: [21, 38, 24, 23, 23, 23, 24, 0],
+    gapLastCardToFooter: 26,
+    blockAHeadingTopOffset: 8,
+    blockAHeadingPaddingTop: -0.25,
+    gapParaToWhyMarginTop: 43.9,
+    gapWhyToModelsMarginTop: 35.2,
+    modelsLine1Width: 451,
+    gapEmergencyToRepairsMarginTop: 26.25,
+    repairsHeadingWidth: 339,
+    blockBMarginTop: 165.25,
+    blockBOffsetLeft: -2,
+    buttonWrapperMarginTop: 46.2,
+    buttonOffsetLeft: 2,
+  },
+  cards: [
+    {
+      id: 'cartier-repair',
+      baseName: 'repair',
+      title: 'Cartier Repair',
+      image: getBrandImage('cartier', 'repair'),
+      alt: 'Cartier repair',
+      minHeight: 236,
+      gapBottom: 21,
+      photoTop: 37,
+      description:
+        'The time gallery repair hundreds of\nCartier watches every year and are\nexperts in our field. Please contact us\nbelow for a free quote.',
+    },
+    {
+      id: 'cartier-refurbishment-polish',
+      baseName: 'refurbishment-polish',
+      title: 'Cartier Refurbishment & Polish',
+      image: getBrandImage('cartier', 'refurbishment-polish'),
+      alt: 'Cartier Refurbishment & Polish',
+      minHeight: 236,
+      gapBottom: 38,
+      photoTop: 37,
+      description:
+        'The time gallery are experts in watch refurbishment and watch polishing.  We can bring your watch to its very best using the finest Swiss polishing and lapping equipment.',
+    },
+    {
+      id: 'cartier-watch-service',
+      baseName: 'watch-service',
+      title: 'Cartier Watch Service',
+      image: getBrandImage('cartier', 'watch-service'),
+      alt: 'Cartier Watch Service',
+      minHeight: 236,
+      gapBottom: 24,
+      photoTop: 37,
+      description:
+        'Every service goes through a 26 step process to ensure your watch is brought back to its very best like new condition.',
+    },
+    {
+      id: 'cartier-crown-replacement',
+      baseName: 'crown-replacement',
+      title: 'Cartier Crown Replacement',
+      image: getBrandImage('cartier', 'crown-replacement'),
+      alt: 'Cartier Crown Replacement',
+      minHeight: 236,
+      gapBottom: 23,
+      photoTop: 37,
+      description:
+        'We replace all crowns using official parts. We then pressure test your watch to ensure it’s water resistance.',
+    },
+    {
+      id: 'cartier-battery-replacement',
+      baseName: 'battery-replacement',
+      title: 'Cartier Watch Battery Replacement',
+      image: getBrandImage('cartier', 'battery-replacement'),
+      alt: 'Cartier Watch Battery Replacement',
+      minHeight: 258,
+      gapBottom: 23,
+      photoTop: 37,
+      titleLineHeight: 20,
+      description:
+        'We use only the finest Swiss batteries when replacing your battery.  This service includes a reseal and pressure test to ensure your watch is waterproof.',
+    },
+    {
+      id: 'cartier-sapphire-plexi-glass',
+      baseName: 'sapphire-plexi-glass',
+      title: 'Cartier Replacement Sapphire & Plexi Glass',
+      image: getBrandImage('cartier', 'sapphire-plexi-glass'),
+      alt: 'Cartier Replacement Sapphire & Plexi Glass',
+      minHeight: 236,
+      gapBottom: 23,
+      photoTop: 37,
+      description:
+        'Whether your watch needs a replacement sapphire glass, sapphire crystal or replacement plexiglass.',
+    },
+    {
+      id: 'cartier-replacement-dial',
+      baseName: 'replacement-dial',
+      title: 'Cartier Replacement Dial',
+      image: getBrandImage('cartier', 'replacement-dial'),
+      alt: 'Cartier Replacement Dial',
+      minHeight: 236,
+      gapBottom: 24,
+      photoTop: 37,
+      description:
+        'Please contact us if your watch dial is damaged or showing signs of age.  We house an extensive stock of old and new Dials.',
+    },
+    {
+      id: 'cartier-bracelet-straps',
+      baseName: 'bracelet-straps',
+      title: 'Cartier Replacement Bracelet & Straps',
+      image: getBrandImage('cartier', 'bracelet-straps'),
+      alt: 'Cartier Replacement Bracelet & Straps',
+      minHeight: 258,
+      gapBottom: 0,
+      photoTop: 37,
+      description:
+        'If your watch strap or bracelet is showing signs of age and needs to be replaced contact us for a replacement. We stock most straps and bracelets at affordable prices.',
+    },
+  ],
+  blockA: {
+    heading:
+      'The Time Gallery Experts in Cartier Repairs and Services.  All Our Work Includes a 1 Year Guarantee So you can rest assured your watch is in safe hands. Our Services Cannot Be Beaten.',
+    paragraph:
+      'Whether your watch needs a complete repair, refurbishment or simply a replacement glass or crown. The Time Gallery has the experience and expertise needed to bring your watch back to its best.',
+    whyHeading: 'Why Use The Time Gallery for your Cartier Repair?',
+    whyBullets: [
+      'Expert Qualified Watchmakers.',
+      'Official Parts.',
+      'Fast Turnaround – Currently 10 working days.',
+      '1 Year Guarantee On All Repairs.',
+    ],
+    modelsHeading:
+      'We service and repair all Cartier models including the following models:-',
+    // TODO: these are Breitling models, ask my lead.
+    modelsList: [
+      'Navi timer',
+      'Super ocean',
+      'Avenger',
+      'Chronometer',
+      'Colt',
+      'Galactic',
+      'Transocean',
+      'Bentley',
+      'Heritage',
+      'Most brilliant',
+      'Professional',
+      'Chrono liner',
+      'Emergency',
+    ],
+    repairsHeading: 'Frequent Cartier repairs that we undertake are:-',
+    repairsBullets: [
+      'Cartier Hand Replacement.',
+      'Cartier Dial Replacement.',
+      'Cartier Replacement Glass.',
+      'Cartier Full  Refurbishment.',
+      'Cartier Replacement Batteries.',
+      'Cartier Bezel Replacement.',
+      'Cartier Replacement Crowns & Pushers.',
+    ],
+  },
+  blockB: {
+    heading:
+      'Please contact us regarding any repair query you may have regarding your Cartier watch repair.',
+    paragraph:
+      'Please fill out the form below and be pleasantly surprised by our fair costs. We endeavor to reply within 24 hours.',
+    buttonText: 'Apply for servicing your watch',
+    buttonLink: '/contact',
+  },
+};
+
+export default cartierData;
