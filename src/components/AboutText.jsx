@@ -1,5 +1,6 @@
 import './AboutText.css';
 
+// Text content constants 
 const HEADING = 'About us';
 
 const PARA_1 =
@@ -7,8 +8,9 @@ const PARA_1 =
 
 const PARA_2 = 'Please see our independent reviews for your peace of mind.';
 
+
 const PARA_3 =
-  'We are repair all brands of quality watches including Rolex, Hublot, Audemars Piguet, Chopard, Dior, Tag Heuer, Omega, Rotary, Seiko, Citizen, Gucci repair, and Panerai repair to name a few.';
+  'We repair all brands of quality watches, including Rolex, Hublot, Audemars Piguet, Chopard, Dior, Tag Heuer, Omega, Rotary, Seiko, Citizen, Gucci repair, and Panerai repair to name a few.';
 
 const PARA_4 = 'Our Current Turnaround:';
 
@@ -28,6 +30,7 @@ export default function AboutText() {
 
         <p className="about-body about-body--large">{PARA_2}</p>
 
+        {/* TODO: Ask lead whether to correct "We are repair" → "We repair" */}
         <p className="about-body">{PARA_3}</p>
 
         <p className="about-body about-body--large">{PARA_4}</p>

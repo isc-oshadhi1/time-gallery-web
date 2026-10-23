@@ -20,7 +20,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: var(--banner-padding-top, 5px);
   transform: translateX(var(--banner-offset-x, 4px));
   box-sizing: border-box;
 }

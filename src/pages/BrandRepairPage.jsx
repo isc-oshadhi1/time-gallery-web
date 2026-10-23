@@ -37,6 +37,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
     bannerVideoWidth: layout.bannerVideoWidth ?? 458,
     bannerOffsetCenter: layout.bannerOffsetCenter ?? 4,
     bannerTitle: layout.bannerTitle !== undefined ? layout.bannerTitle : banner.heading,
+    bannerPaddingTop: layout.bannerPaddingTop ?? 5,
     gapBannerToCard1: layout.gapBannerToCard1 ?? 54,
     bodyContainerWidth: layout.bodyContainerWidth ?? 1100,
     bodyPaddingLeft: layout.bodyPaddingLeft ?? 55,
@@ -68,6 +69,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
       <section
         className="brand-banner-section"
         style={{
+          '--banner-padding-top': `${layoutConfig.bannerPaddingTop}px`,
           '--banner-offset-x': `${layoutConfig.bannerOffsetCenter}px`,
         }}
         aria-label={`${brand.brandName || 'Brand'} repair banner`}
@@ -169,7 +171,15 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-a">
             {/* Heading: 3 lines */}
             <h2 className="brand-block-a__heading">
-              {slug === 'cartier' ? (
+              {slug === 'iwc' ? (
+                <>
+                  The Time Gallery Experts in IWC Repairs and Services.&nbsp; All Our
+                  <br />
+                  Work Includes a 1 Year Guarantee So you can rest assured your
+                  <br />
+                  watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
+              ) : slug === 'cartier' ? (
                 <>
                   The Time Gallery Experts in Cartier Repairs and Services.&nbsp; All
                   <br />
@@ -205,9 +215,11 @@ export default function BrandRepairPage({ brand = rolexData }) {
               ))}
             </ul>
 
-            {/* Models heading: 2 lines */}
+            {/* Models heading: 1 line on IWC, 2 lines on others */}
             <h3 className="brand-block-a__models-heading">
-              {slug === 'cartier' ? (
+              {slug === 'iwc' ? (
+                'We service and repair all IWC models including the following models:-'
+              ) : slug === 'cartier' ? (
                 <>
                   We service and repair all Cartier models including the following
                   <br />
@@ -245,7 +257,13 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-b">
             {/* Heading: 2 lines */}
             <h3 className="brand-block-b__heading">
-              {slug === 'cartier' ? (
+              {slug === 'iwc' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your IWC watch repair.
+                </>
+              ) : slug === 'cartier' ? (
                 <>
                   Please contact us regarding any repair query you may have regarding
                   <br />
