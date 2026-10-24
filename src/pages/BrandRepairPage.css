@@ -69,18 +69,18 @@
   display: block;
 }
 
-/* <h1> "Rolex Watch Repair": red (#e0101a), bold, 19.35px, tight tracking (-0.04em), width 167px, center 31px above bottom */
+/* <h1> Banner Title Overlay: red (#e0101a), bold, customizable per brand */
 .brand-banner-title {
   position: absolute;
-  left: 24px;
-  bottom: 21px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 19.35px;
-  font-weight: 700;
-  color: #e0101a;
-  letter-spacing: -0.04em;
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
-  line-height: 20px;
+  left: var(--banner-title-left, 24px);
+  bottom: var(--banner-title-bottom, 21px);
+  font-family: var(--banner-title-font-family, Arial, Helvetica, sans-serif);
+  font-size: var(--banner-title-font-size, 19.35px);
+  font-weight: var(--banner-title-font-weight, 700);
+  color: var(--banner-title-color, #e0101a);
+  letter-spacing: var(--banner-title-letter-spacing, -0.04em);
+  text-shadow: var(--banner-title-shadow, 2px 2px 3px rgba(0, 0, 0, 0.35));
+  line-height: var(--banner-title-line-height, 20px);
   white-space: nowrap;
   margin: 0;
   padding: 0;
@@ -204,7 +204,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14.95px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: var(--models-line-height, 26px);
   color: #000000;
   margin: var(--gap-models-margin-top, 49.2px) 0 0 0;
   padding: 0;
@@ -212,7 +212,7 @@
 
 /* Models list: 13 plain-text lines with literal "• ", 13px, pitch 23.5px */
 .brand-block-a__models-list {
-  margin-top: 1.25px;
+  margin-top: var(--models-list-margin-top, 1.25px);
 }
 
 .brand-block-a__model-item {

@@ -37,6 +37,15 @@ export default function BrandRepairPage({ brand = rolexData }) {
     bannerVideoWidth: layout.bannerVideoWidth ?? 458,
     bannerOffsetCenter: layout.bannerOffsetCenter ?? 4,
     bannerTitle: layout.bannerTitle !== undefined ? layout.bannerTitle : banner.heading,
+    bannerTitleFontFamily: layout.bannerTitleFontFamily ?? 'Arial, Helvetica, sans-serif',
+    bannerTitleColor: layout.bannerTitleColor ?? '#e0101a',
+    bannerTitleLineHeight: layout.bannerTitleLineHeight ?? 20,
+    bannerTitleLeft: layout.bannerTitleLeft ?? 24,
+    bannerTitleBottom: layout.bannerTitleBottom ?? 21,
+    bannerTitleFontSize: layout.bannerTitleFontSize ?? 19.35,
+    bannerTitleFontWeight: layout.bannerTitleFontWeight ?? 700,
+    bannerTitleLetterSpacing: layout.bannerTitleLetterSpacing ?? '-0.04em',
+    bannerTitleShadow: layout.bannerTitleShadow ?? '2px 2px 3px rgba(0, 0, 0, 0.35)',
     bannerPaddingTop: layout.bannerPaddingTop ?? 5,
     gapBannerToCard1: layout.gapBannerToCard1 ?? 54,
     bodyContainerWidth: layout.bodyContainerWidth ?? 1100,
@@ -49,6 +58,8 @@ export default function BrandRepairPage({ brand = rolexData }) {
     gapParaToWhyMarginTop: layout.gapParaToWhyMarginTop ?? 46.2,
     gapWhyToModelsMarginTop: layout.gapWhyToModelsMarginTop ?? 49.2,
     modelsLine1Width: layout.modelsLine1Width ?? 443,
+    modelsLineHeight: layout.modelsLineHeight ?? 26,
+    modelsListMarginTop: layout.modelsListMarginTop ?? 1.25,
     gapEmergencyToRepairsMarginTop: layout.gapEmergencyToRepairsMarginTop ?? 53.25,
     repairsHeadingWidth: layout.repairsHeadingWidth ?? 332,
     blockBMarginTop: layout.blockBMarginTop ?? 123.2,
@@ -117,7 +128,22 @@ export default function BrandRepairPage({ brand = rolexData }) {
             )}
 
             {layoutConfig.bannerTitle ? (
-              <h1 className="brand-banner-title">{layoutConfig.bannerTitle}</h1>
+              <h1
+                className="brand-banner-title"
+                style={{
+                  '--banner-title-left': `${layoutConfig.bannerTitleLeft}px`,
+                  '--banner-title-bottom': `${layoutConfig.bannerTitleBottom}px`,
+                  '--banner-title-font-family': layoutConfig.bannerTitleFontFamily,
+                  '--banner-title-font-size': `${layoutConfig.bannerTitleFontSize}px`,
+                  '--banner-title-font-weight': layoutConfig.bannerTitleFontWeight,
+                  '--banner-title-color': layoutConfig.bannerTitleColor,
+                  '--banner-title-line-height': `${layoutConfig.bannerTitleLineHeight}px`,
+                  '--banner-title-letter-spacing': layoutConfig.bannerTitleLetterSpacing,
+                  '--banner-title-shadow': layoutConfig.bannerTitleShadow,
+                }}
+              >
+                {layoutConfig.bannerTitle}
+              </h1>
             ) : (
               <h1 className="sr-only brand-banner-title--sr-only">
                 {banner.heading || pageTitle}
@@ -159,6 +185,8 @@ export default function BrandRepairPage({ brand = rolexData }) {
             '--gap-why-margin-top': `${layoutConfig.gapParaToWhyMarginTop}px`,
             '--gap-models-margin-top': `${layoutConfig.gapWhyToModelsMarginTop}px`,
             '--models-line1-width': `${layoutConfig.modelsLine1Width}px`,
+            '--models-line-height': `${layoutConfig.modelsLineHeight}px`,
+            '--models-list-margin-top': `${layoutConfig.modelsListMarginTop}px`,
             '--gap-repairs-margin-top': `${layoutConfig.gapEmergencyToRepairsMarginTop}px`,
             '--repairs-heading-width': `${layoutConfig.repairsHeadingWidth}px`,
             '--block-b-margin-top': `${layoutConfig.blockBMarginTop}px`,
@@ -171,7 +199,25 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-a">
             {/* Heading: 3 lines */}
             <h2 className="brand-block-a__heading">
-              {slug === 'iwc' ? (
+              {slug === 'audemars-piguet' ? (
+                <>
+                  The Time Gallery Experts In Audemars Piguet Repairs and
+                  <br />
+                  Services.&nbsp; All Our Work Includes a 1 Year Guarantee So you can
+                  <br />
+                  rest assured your watch is in safe hands. Our Services Cannot
+                  <br />
+                  Be Beaten.
+                </>
+              ) : slug === 'hublot' ? (
+                <>
+                  The Time Gallery Experts in Hublot Repairs and Services.&nbsp; All
+                  <br />
+                  Our Work Includes a 1 Year Guarantee So you can rest assured
+                  <br />
+                  your watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
+              ) : slug === 'iwc' ? (
                 <>
                   The Time Gallery Experts in IWC Repairs and Services.&nbsp; All Our
                   <br />
@@ -217,7 +263,19 @@ export default function BrandRepairPage({ brand = rolexData }) {
 
             {/* Models heading: 1 line on IWC, 2 lines on others */}
             <h3 className="brand-block-a__models-heading">
-              {slug === 'iwc' ? (
+              {slug === 'audemars-piguet' ? (
+                <>
+                  We service and repair all Audemars Piguet models including the
+                  <br />
+                  following models:-
+                </>
+              ) : slug === 'hublot' ? (
+                <>
+                  We service and repair all Hublot models including the following
+                  <br />
+                  models:-
+                </>
+              ) : slug === 'iwc' ? (
                 'We service and repair all IWC models including the following models:-'
               ) : slug === 'cartier' ? (
                 <>
@@ -257,7 +315,19 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-b">
             {/* Heading: 2 lines */}
             <h3 className="brand-block-b__heading">
-              {slug === 'iwc' ? (
+              {slug === 'audemars-piguet' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Audemars Piguet watch repair.
+                </>
+              ) : slug === 'hublot' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Hublot watch repair.
+                </>
+              ) : slug === 'iwc' ? (
                 <>
                   Please contact us regarding any repair query you may have regarding
                   <br />
