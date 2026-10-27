@@ -12,6 +12,7 @@ import cartierData from './data/brands/cartier';
 import iwcData from './data/brands/iwc';
 import hublotData from './data/brands/hublot';
 import audemarsPiguetData from './data/brands/audemars-piguet';
+import chopardData from './data/brands/chopard';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -42,6 +43,7 @@ export default function App() {
             path="/audemars-piguet-watch-repair"
             element={<BrandRepairPage brand={audemarsPiguetData} />}
           />
+          <Route path="/chopard-watch-repair" element={<BrandRepairPage brand={chopardData} />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 

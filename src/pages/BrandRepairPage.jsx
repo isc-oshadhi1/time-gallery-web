@@ -217,6 +217,14 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   <br />
                   your watch is in safe hands. Our Services Cannot Be Beaten.
                 </>
+              ) : slug === 'chopard' ? (
+                <>
+                  The Time Gallery Experts In Chopard Repairs and Services.&nbsp; All
+                  <br />
+                  Our Work Includes a 1 Year Guarantee So you can rest assured
+                  <br />
+                  your watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
               ) : slug === 'iwc' ? (
                 <>
                   The Time Gallery Experts in IWC Repairs and Services.&nbsp; All Our
@@ -275,6 +283,12 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   <br />
                   models:-
                 </>
+              ) : slug === 'chopard' ? (
+                <>
+                  We service and repair all Chopard models including the following
+                  <br />
+                  models:-
+                </>
               ) : slug === 'iwc' ? (
                 'We service and repair all IWC models including the following models:-'
               ) : slug === 'cartier' ? (
@@ -326,6 +340,13 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   Please contact us regarding any repair query you may have regarding
                   <br />
                   your Hublot watch repair.
+                </>
+              ) : slug === 'chopard' ? (
+                <>
+                  {/* TODO: original site says "Audemars Piguet" instead of "Chopard" – copy error, preserving verbatim */}
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Audemars Piguet watch repair.
                 </>
               ) : slug === 'iwc' ? (
                 <>
