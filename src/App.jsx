@@ -16,6 +16,8 @@ import chopardData from './data/brands/chopard';
 import diorData from './data/brands/dior';
 import tagHeuerData from './data/brands/tag-heuer';
 import omegaData from './data/brands/omega';
+import longinesData from './data/brands/longines';
+import radoData from './data/brands/rado';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -50,6 +52,8 @@ export default function App() {
           <Route path="/dior-watch-repair" element={<BrandRepairPage brand={diorData} />} />
           <Route path="/tag-heuer-repair" element={<BrandRepairPage brand={tagHeuerData} />} />
           <Route path="/omega-watch-repair" element={<BrandRepairPage brand={omegaData} />} />
+          <Route path="/longines-watch-repair" element={<BrandRepairPage brand={longinesData} />} />
+          <Route path="/rado-watch-repair" element={<BrandRepairPage brand={radoData} />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 

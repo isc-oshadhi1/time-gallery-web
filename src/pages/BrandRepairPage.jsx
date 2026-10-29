@@ -35,6 +35,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
     bannerWidth: layout.bannerWidth ?? 1100,
     bannerHeight: layout.bannerHeight ?? 242,
     bannerVideoWidth: layout.bannerVideoWidth ?? 458,
+    bannerGap: layout.bannerGap ?? 0,
     bannerOffsetCenter: layout.bannerOffsetCenter ?? 4,
     bannerTitle: layout.bannerTitle !== undefined ? layout.bannerTitle : banner.heading,
     bannerTitleFontFamily: layout.bannerTitleFontFamily ?? 'Arial, Helvetica, sans-serif',
@@ -56,6 +57,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
     gapLastCardToFooter: layout.gapLastCardToFooter ?? 20,
     blockAHeadingTopOffset: layout.blockAHeadingTopOffset ?? 10,
     blockAHeadingPaddingTop: layout.blockAHeadingPaddingTop ?? 3.5,
+    blockAHeadingLineHeight: layout.blockAHeadingLineHeight ?? 16.5,
     blockAParaMarginTop: layout.blockAParaMarginTop ?? 42,
     gapParaToWhyMarginTop: layout.gapParaToWhyMarginTop ?? 46.2,
     gapWhyToModelsMarginTop: layout.gapWhyToModelsMarginTop ?? 49.2,
@@ -68,12 +70,14 @@ export default function BrandRepairPage({ brand = rolexData }) {
     blockBMarginTop: layout.blockBMarginTop ?? 123.2,
     blockBHeadingLineHeight: layout.blockBHeadingLineHeight ?? 26,
     blockBParaMarginTop: layout.blockBParaMarginTop ?? 32.2,
+    blockBParaLineHeight: layout.blockBParaLineHeight ?? 23.6,
     blockBOffsetLeft: layout.blockBOffsetLeft ?? 0,
     buttonWrapperMarginTop: layout.buttonWrapperMarginTop ?? 11.2,
     buttonOffsetLeft: layout.buttonOffsetLeft ?? 0,
   };
 
-  const bannerImageWidth = layoutConfig.bannerWidth - layoutConfig.bannerVideoWidth;
+  const bannerImageWidth =
+    layoutConfig.bannerWidth - layoutConfig.bannerVideoWidth - layoutConfig.bannerGap;
 
   return (
     <main className="brand-page-main">
@@ -96,6 +100,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
             '--banner-width': `${layoutConfig.bannerWidth}px`,
             '--banner-height': `${layoutConfig.bannerHeight}px`,
             '--banner-video-width': `${layoutConfig.bannerVideoWidth}px`,
+            '--banner-gap': `${layoutConfig.bannerGap}px`,
           }}
         >
           {/* Left video */}
@@ -189,6 +194,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
           aria-label="Brand Repair Information and Inquiries"
           style={{
             '--heading-padding-top': `${layoutConfig.blockAHeadingPaddingTop}px`,
+            '--block-a-heading-line-height': `${layoutConfig.blockAHeadingLineHeight}px`,
             '--block-a-para-margin-top': `${layoutConfig.blockAParaMarginTop}px`,
             '--gap-why-margin-top': `${layoutConfig.gapParaToWhyMarginTop}px`,
             '--gap-models-margin-top': `${layoutConfig.gapWhyToModelsMarginTop}px`,
@@ -201,6 +207,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
             '--block-b-margin-top': `${layoutConfig.blockBMarginTop}px`,
             '--block-b-heading-line-height': `${layoutConfig.blockBHeadingLineHeight}px`,
             '--block-b-para-margin-top': `${layoutConfig.blockBParaMarginTop}px`,
+            '--block-b-para-line-height': `${layoutConfig.blockBParaLineHeight}px`,
             '--block-b-offset-x': `${layoutConfig.blockBOffsetLeft}px`,
             '--button-wrapper-margin-top': `${layoutConfig.buttonWrapperMarginTop}px`,
             '--button-offset-x': `${layoutConfig.buttonOffsetLeft}px`,
@@ -210,7 +217,17 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-a">
             {/* Heading: 3 lines */}
             <h2 className="brand-block-a__heading">
-              {slug === 'audemars-piguet' ? (
+              {slug === 'longines' ? (
+                <>
+                  The Time Gallery Experts in Longines Repairs and Services.
+                  <br />
+                  &nbsp;All Our Work Includes a 1 Year Guarantee So you can rest
+                  <br />
+                  assured your watch is in safe hands. Our Services Cannot Be
+                  <br />
+                  Beaten.
+                </>
+              ) : slug === 'audemars-piguet' ? (
                 <>
                   The Time Gallery Experts In Audemars Piguet Repairs and
                   <br />
@@ -279,6 +296,14 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   <br />
                   your watch is in safe hands. Our Services Cannot Be Beaten.
                 </>
+              ) : slug === 'rado' ? (
+                <>
+                  The Time Gallery Experts In Rado Repairs and Services.&nbsp; All
+                  <br />
+                  Our Work Includes a 1 Year Guarantee So you can rest assured
+                  <br />
+                  your watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
               ) : (
                 <>
                   The Time Gallery Experts in Rolex Repairs and Services.&nbsp; All
@@ -309,7 +334,13 @@ export default function BrandRepairPage({ brand = rolexData }) {
 
             {/* Models heading: 1 line on IWC, 2 lines on others */}
             <h3 className="brand-block-a__models-heading">
-              {slug === 'audemars-piguet' ? (
+              {slug === 'longines' ? (
+                <>
+                  We service and repair all Longines models including the following
+                  <br />
+                  models:-
+                </>
+              ) : slug === 'audemars-piguet' ? (
                 <>
                   We service and repair all Audemars Piguet models including the
                   <br />
@@ -337,6 +368,8 @@ export default function BrandRepairPage({ brand = rolexData }) {
                 </>
               ) : slug === 'dior' ? (
                 'We service and repair all Dior models including the following models:-'
+              ) : slug === 'rado' ? (
+                'We service and repair all Rado models including the following models:-'
               ) : slug === 'tag-heuer' ? (
                 <>
                   We service and repair all Tag Heuer models including the following
@@ -381,7 +414,13 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-b">
             {/* Heading: 2 lines */}
             <h3 className="brand-block-b__heading">
-              {slug === 'audemars-piguet' ? (
+              {slug === 'longines' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Longines watch repair.
+                </>
+              ) : slug === 'audemars-piguet' ? (
                 <>
                   Please contact us regarding any repair query you may have regarding
                   <br />
@@ -429,6 +468,12 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   Please contact us regarding any repair query you may have regarding
                   <br />
                   your Omega watch repair.
+                </>
+              ) : slug === 'rado' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Rado watch repair.
                 </>
               ) : (
                 <>

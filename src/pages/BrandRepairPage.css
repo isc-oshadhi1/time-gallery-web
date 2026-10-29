@@ -30,6 +30,7 @@
   height: var(--banner-height, 242px);
   margin: 0 auto;
   display: flex;
+  gap: var(--banner-gap, 0px);
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -55,9 +56,9 @@
 
 /* Right image: object-fit cover, with optional <h1> overlay */
 .brand-banner-image-wrapper {
-  width: calc(var(--banner-width, 1100px) - var(--banner-video-width, 458px));
+  width: calc(var(--banner-width, 1100px) - var(--banner-video-width, 458px) - var(--banner-gap, 0px));
   height: var(--banner-height, 242px);
-  flex: 0 0 calc(var(--banner-width, 1100px) - var(--banner-video-width, 458px));
+  flex: 0 0 calc(var(--banner-width, 1100px) - var(--banner-video-width, 458px) - var(--banner-gap, 0px));
   position: relative;
   overflow: hidden;
 }
@@ -153,7 +154,8 @@
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.1em;
-  line-height: 16.5px;
+  line-height: var(--block-a-heading-line-height, 16.5px);
+  white-space: pre-wrap;
   color: #000000;
   margin: 0;
   padding-top: var(--heading-padding-top, 3.5px);
@@ -279,7 +281,7 @@
 .brand-block-b__paragraph {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 13px;
-  line-height: 23.6px;
+  line-height: var(--block-b-para-line-height, 23.6px);
   color: #000000;
   margin: var(--block-b-para-margin-top, 32.2px) 0 0 0;
   padding: 0;
@@ -371,6 +373,7 @@
     max-width: 640px;
     height: auto;
     flex-direction: column;
+    gap: 0;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   }
