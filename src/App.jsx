@@ -13,6 +13,9 @@ import iwcData from './data/brands/iwc';
 import hublotData from './data/brands/hublot';
 import audemarsPiguetData from './data/brands/audemars-piguet';
 import chopardData from './data/brands/chopard';
+import diorData from './data/brands/dior';
+import tagHeuerData from './data/brands/tag-heuer';
+import omegaData from './data/brands/omega';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -44,6 +47,9 @@ export default function App() {
             element={<BrandRepairPage brand={audemarsPiguetData} />}
           />
           <Route path="/chopard-watch-repair" element={<BrandRepairPage brand={chopardData} />} />
+          <Route path="/dior-watch-repair" element={<BrandRepairPage brand={diorData} />} />
+          <Route path="/tag-heuer-repair" element={<BrandRepairPage brand={tagHeuerData} />} />
+          <Route path="/omega-watch-repair" element={<BrandRepairPage brand={omegaData} />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 

@@ -41,6 +41,7 @@ export default function BrandRepairPage({ brand = rolexData }) {
     bannerTitleColor: layout.bannerTitleColor ?? '#e0101a',
     bannerTitleLineHeight: layout.bannerTitleLineHeight ?? 20,
     bannerTitleLeft: layout.bannerTitleLeft ?? 24,
+    bannerTitleRight: layout.bannerTitleRight ?? null,
     bannerTitleBottom: layout.bannerTitleBottom ?? 21,
     bannerTitleFontSize: layout.bannerTitleFontSize ?? 19.35,
     bannerTitleFontWeight: layout.bannerTitleFontWeight ?? 700,
@@ -55,14 +56,18 @@ export default function BrandRepairPage({ brand = rolexData }) {
     gapLastCardToFooter: layout.gapLastCardToFooter ?? 20,
     blockAHeadingTopOffset: layout.blockAHeadingTopOffset ?? 10,
     blockAHeadingPaddingTop: layout.blockAHeadingPaddingTop ?? 3.5,
+    blockAParaMarginTop: layout.blockAParaMarginTop ?? 42,
     gapParaToWhyMarginTop: layout.gapParaToWhyMarginTop ?? 46.2,
     gapWhyToModelsMarginTop: layout.gapWhyToModelsMarginTop ?? 49.2,
     modelsLine1Width: layout.modelsLine1Width ?? 443,
     modelsLineHeight: layout.modelsLineHeight ?? 26,
+    modelsHeadingDisplay: layout.modelsHeadingDisplay ?? 'block',
     modelsListMarginTop: layout.modelsListMarginTop ?? 1.25,
     gapEmergencyToRepairsMarginTop: layout.gapEmergencyToRepairsMarginTop ?? 53.25,
     repairsHeadingWidth: layout.repairsHeadingWidth ?? 332,
     blockBMarginTop: layout.blockBMarginTop ?? 123.2,
+    blockBHeadingLineHeight: layout.blockBHeadingLineHeight ?? 26,
+    blockBParaMarginTop: layout.blockBParaMarginTop ?? 32.2,
     blockBOffsetLeft: layout.blockBOffsetLeft ?? 0,
     buttonWrapperMarginTop: layout.buttonWrapperMarginTop ?? 11.2,
     buttonOffsetLeft: layout.buttonOffsetLeft ?? 0,
@@ -131,7 +136,9 @@ export default function BrandRepairPage({ brand = rolexData }) {
               <h1
                 className="brand-banner-title"
                 style={{
-                  '--banner-title-left': `${layoutConfig.bannerTitleLeft}px`,
+                  ...(layoutConfig.bannerTitleRight != null
+                    ? { '--banner-title-right': `${layoutConfig.bannerTitleRight}px`, '--banner-title-left': 'auto' }
+                    : { '--banner-title-left': `${layoutConfig.bannerTitleLeft}px` }),
                   '--banner-title-bottom': `${layoutConfig.bannerTitleBottom}px`,
                   '--banner-title-font-family': layoutConfig.bannerTitleFontFamily,
                   '--banner-title-font-size': `${layoutConfig.bannerTitleFontSize}px`,
@@ -182,14 +189,18 @@ export default function BrandRepairPage({ brand = rolexData }) {
           aria-label="Brand Repair Information and Inquiries"
           style={{
             '--heading-padding-top': `${layoutConfig.blockAHeadingPaddingTop}px`,
+            '--block-a-para-margin-top': `${layoutConfig.blockAParaMarginTop}px`,
             '--gap-why-margin-top': `${layoutConfig.gapParaToWhyMarginTop}px`,
             '--gap-models-margin-top': `${layoutConfig.gapWhyToModelsMarginTop}px`,
             '--models-line1-width': `${layoutConfig.modelsLine1Width}px`,
             '--models-line-height': `${layoutConfig.modelsLineHeight}px`,
+            '--models-heading-display': layoutConfig.modelsHeadingDisplay,
             '--models-list-margin-top': `${layoutConfig.modelsListMarginTop}px`,
             '--gap-repairs-margin-top': `${layoutConfig.gapEmergencyToRepairsMarginTop}px`,
             '--repairs-heading-width': `${layoutConfig.repairsHeadingWidth}px`,
             '--block-b-margin-top': `${layoutConfig.blockBMarginTop}px`,
+            '--block-b-heading-line-height': `${layoutConfig.blockBHeadingLineHeight}px`,
+            '--block-b-para-margin-top': `${layoutConfig.blockBParaMarginTop}px`,
             '--block-b-offset-x': `${layoutConfig.blockBOffsetLeft}px`,
             '--button-wrapper-margin-top': `${layoutConfig.buttonWrapperMarginTop}px`,
             '--button-offset-x': `${layoutConfig.buttonOffsetLeft}px`,
@@ -220,6 +231,33 @@ export default function BrandRepairPage({ brand = rolexData }) {
               ) : slug === 'chopard' ? (
                 <>
                   The Time Gallery Experts In Chopard Repairs and Services.&nbsp; All
+                  <br />
+                  Our Work Includes a 1 Year Guarantee So you can rest assured
+                  <br />
+                  your watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
+              ) : slug === 'dior' ? (
+                <>
+                  {/* TODO: original site says "Chopard" here instead of "Dior" – copy error from Wix, preserving verbatim. Ask my lead. */}
+                  The Time Gallery Experts In Chopard Repairs and Services.&nbsp; All
+                  <br />
+                  Our Work Includes a 1 Year Guarantee So you can rest assured
+                  <br />
+                  your watch is in safe hands. Our Services Cannot Be Beaten.
+                </>
+              ) : slug === 'tag-heuer' ? (
+                <>
+                  The Time Gallery Experts in Tag Heuer Repairs and Services.
+                  <br />
+                  &nbsp;All Our Work Includes a 1 Year Guarantee So you can rest
+                  <br />
+                  assured your watch is in safe hands. Our Services Cannot Be
+                  <br />
+                  Beaten.
+                </>
+              ) : slug === 'omega' ? (
+                <>
+                  The Time Gallery Experts in Omega Repairs and Services.&nbsp; All
                   <br />
                   Our Work Includes a 1 Year Guarantee So you can rest assured
                   <br />
@@ -297,6 +335,20 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   <br />
                   models:-
                 </>
+              ) : slug === 'dior' ? (
+                'We service and repair all Dior models including the following models:-'
+              ) : slug === 'tag-heuer' ? (
+                <>
+                  We service and repair all Tag Heuer models including the following
+                  <br />
+                  models:-
+                </>
+              ) : slug === 'omega' ? (
+                <>
+                  We service and repair all Omega models including the following
+                  <br />
+                  models:-
+                </>
               ) : (
                 <>
                   We service and repair all Rolex models including the following
@@ -359,6 +411,24 @@ export default function BrandRepairPage({ brand = rolexData }) {
                   Please contact us regarding any repair query you may have regarding
                   <br />
                   your Cartier watch repair.
+                </>
+              ) : slug === 'dior' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Dior watch repair.
+                </>
+              ) : slug === 'tag-heuer' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Tag Heuer watch repair.
+                </>
+              ) : slug === 'omega' ? (
+                <>
+                  Please contact us regarding any repair query you may have regarding
+                  <br />
+                  your Omega watch repair.
                 </>
               ) : (
                 <>

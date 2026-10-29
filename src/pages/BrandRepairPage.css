@@ -73,6 +73,7 @@
 .brand-banner-title {
   position: absolute;
   left: var(--banner-title-left, 24px);
+  right: var(--banner-title-right, auto);
   bottom: var(--banner-title-bottom, 21px);
   font-family: var(--banner-title-font-family, Arial, Helvetica, sans-serif);
   font-size: var(--banner-title-font-size, 19.35px);
@@ -166,7 +167,7 @@
   font-size: 13px;
   line-height: 15.6px;
   color: #000000;
-  margin: 42px 0 0 0;
+  margin: var(--block-a-para-margin-top, 42px) 0 0 0;
   padding: 0;
   width: 515px;
   box-sizing: border-box;
@@ -201,6 +202,7 @@
 
 /* Models heading: bold ~15px (line 1 width 443px on Rolex, 451px on Cartier), line-height 26px */
 .brand-block-a__models-heading {
+  display: var(--models-heading-display, block);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14.95px;
   font-weight: 700;
@@ -267,7 +269,7 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
   font-weight: 700;
-  line-height: 26px;
+  line-height: var(--block-b-heading-line-height, 26px);
   color: #000000;
   margin: 0;
   padding: 0;
@@ -279,7 +281,7 @@
   font-size: 13px;
   line-height: 23.6px;
   color: #000000;
-  margin: 32.2px 0 0 0;
+  margin: var(--block-b-para-margin-top, 32.2px) 0 0 0;
   padding: 0;
 }
 
