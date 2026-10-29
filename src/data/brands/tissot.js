@@ -1,0 +1,77 @@
+import { getBrandImage } from '../../utils/brandImages';
+
+const services = [
+  ['repair', 'Tissot Repair', 'The time gallery repair hundreds of Rado watches every year and are experts in our field. Please contact us below for a free quote.'],
+  ['refurbishment-polish', 'Tissot Refurbishment & Polish', 'The time gallery are experts in watch refurbishment and watch polishing.  We can bring your watch to its very best using the finest Swiss polishing and lapping equipment.'],
+  ['watch-service', 'Tissot Watch Service', 'Every service goes through a 26 step process to ensure your watch is brought back to its very best like new condition.'],
+  ['crown-replacement', 'Tissot Crown Replacement', 'We replace all crowns using official parts. We then pressure test your watch to ensure it’s water resistance.'],
+  ['battery-replacement', 'Tissot Watch Battery Replacement', 'We use only the finest Swiss batteries when replacing your battery.  This service includes a reseal and pressure test to ensure your watch is water proof. All this for £44.95 + VAT and a 2 year guarantee..'],
+  ['sapphire-plexi-glass', 'Tissot Replacement Sapphire & Plexi Glass', 'Whether your watch needs a replacement sapphire glass, sapphire crystal or replacement plexiglass.'],
+  ['replacement-dial', 'Tissot Replacement Dial', 'Please contact us if your watch dial is damaged or showing signs of age.  We house an extensive stock of old and new Dials.'],
+  ['bracelet-straps', 'Tissot Replacement Bracelet & Straps', 'If your watch strap or bracelet is showing signs of age and needs to be replaced contact us for a replacement. We stock most straps and bracelets at affordable prices.'],
+];
+
+export const tissotData = {
+  slug: 'tissot',
+  brandName: 'Tissot',
+  pageTitle: 'Tissot Watch Repair | Thetimegallery',
+  banner: {
+    videoSrc: '/videos/about-banner.mp4',
+    imageSrc: getBrandImage('tissot', 'banner'),
+    heading: 'Tissot Watch Repairs',
+  },
+  layout: {
+    bannerWidth: 1138,
+    bannerHeight: 198,
+    bannerVideoWidth: 423,
+    bannerGap: 10,
+    bannerOffsetCenter: -36.6,
+    bannerTitle: 'Tissot Watch Repairs',
+    bannerTitleFontFamily: 'Impact, "Arial Black", sans-serif',
+    bannerTitleColor: '#e0101a',
+    bannerTitleLeft: 7,
+    bannerTitleBottom: 10,
+    bannerTitleFontSize: 24,
+    bannerTitleFontWeight: 900,
+    bannerTitleLineHeight: 26,
+    bannerTitleLetterSpacing: '-0.05em',
+    bannerTitleShadow: '2px 2px 3px rgba(0, 0, 0, 0.4)',
+    bannerPaddingTop: 16,
+    gapBannerToCard1: 74,
+    bodyContainerWidth: 1128,
+    bodyPaddingLeft: 98,
+    bodyPaddingRight: 19,
+    bodyOffsetCenter: -33,
+    gapLastCardToFooter: 36,
+    blockBMarginTop: 90,
+  },
+  cards: services.map(([baseName, title, description], index) => ({
+    id: `tissot-${baseName}`,
+    baseName,
+    title,
+    image: getBrandImage('tissot', baseName),
+    alt: title,
+    minHeight: [236, 236, 236, 236, 258, 236, 236, 258][index],
+    gapBottom: [21, 23, 22, 22, 20, 21, 21, 0][index],
+    photoTop: 37,
+    description,
+  })),
+  blockA: {
+    heading: 'The Time Gallery Experts in Tissot  Repairs and Services.  All Our Work Includes a 1 Year Guarantee So you can rest assured your watch is in safe hands. Our Services Cannot Be Beaten.',
+    paragraph: 'Whether your watch needs a complete repair, refurbishment or simply a replacement glass or crown. The Time Gallery has the experience and expertise needed to bring your watch back to its best.',
+    whyHeading: 'Why Use The Time Gallery for your Tissot  Repair?',
+    whyBullets: ['Expert Qualified Watchmakers.', 'Official Parts.', 'Fast Turnaround – Currently 10 working days.', '1 Year Guarantee On All Repairs.'],
+    modelsHeading: 'We service and repair all Tissot models including the following models:',
+    modelsList: ['Navitimer', 'Superocean', 'Avenger', 'Chronomat', 'Colt', 'Galatic', 'Transocean', 'Bentley', 'Heritage', 'Most brilliant', 'Professional', 'Chronoliner', 'Emergency'],
+    repairsHeading: 'Frequent Tissot repairs that we undertake are:-',
+    repairsBullets: ['Tissot Hand Replacement.', 'Tissot Dial Replacement.', 'Tissot Replacement Glass.', 'Tissot Full  Refurbishment.', 'Tissot Replacement Batteries.', 'Tissot Bezel Replacement.', 'Tissot Replacement Crowns & Pushers.'],
+  },
+  blockB: {
+    heading: 'Please contact us regarding any repair query you may have regarding your Tissot watch repair.',
+    paragraph: 'Please fill out the form below and be pleasantly surprised by our fair costs. We endeavor to reply within 24 hours.',
+    buttonText: 'Apply for servicing your watch',
+    buttonLink: '/contact',
+  },
+};
+
+export default tissotData;

@@ -217,7 +217,9 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-a">
             {/* Heading: 3 lines */}
             <h2 className="brand-block-a__heading">
-              {slug === 'longines' ? (
+              {slug === 'tissot' ? (
+                blockA.heading
+              ) : slug === 'longines' ? (
                 <>
                   The Time Gallery Experts in Longines Repairs and Services.
                   <br />
@@ -317,11 +319,17 @@ export default function BrandRepairPage({ brand = rolexData }) {
 
             {/* Paragraph: 3 lines */}
             <p className="brand-block-a__paragraph">
-              Whether your watch needs a complete repair, refurbishment or simply a replacement
-              <br />
-              glass or crown. The Time Gallery has the experience and expertise needed to bring your
-              <br />
-              watch back to its best.
+              {slug === 'tissot' ? (
+                blockA.paragraph
+              ) : (
+                <>
+                  Whether your watch needs a complete repair, refurbishment or simply a replacement
+                  <br />
+                  glass or crown. The Time Gallery has the experience and expertise needed to bring your
+                  <br />
+                  watch back to its best.
+                </>
+              )}
             </p>
 
             {/* Why heading + bullet list */}
@@ -334,7 +342,9 @@ export default function BrandRepairPage({ brand = rolexData }) {
 
             {/* Models heading: 1 line on IWC, 2 lines on others */}
             <h3 className="brand-block-a__models-heading">
-              {slug === 'longines' ? (
+              {slug === 'tissot' ? (
+                blockA.modelsHeading
+              ) : slug === 'longines' ? (
                 <>
                   We service and repair all Longines models including the following
                   <br />
@@ -414,7 +424,9 @@ export default function BrandRepairPage({ brand = rolexData }) {
           <div className="brand-block-b">
             {/* Heading: 2 lines */}
             <h3 className="brand-block-b__heading">
-              {slug === 'longines' ? (
+              {slug === 'tissot' ? (
+                blockB.heading
+              ) : slug === 'longines' ? (
                 <>
                   Please contact us regarding any repair query you may have regarding
                   <br />
