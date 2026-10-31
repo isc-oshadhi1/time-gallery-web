@@ -19,6 +19,7 @@ import omegaData from './data/brands/omega';
 import longinesData from './data/brands/longines';
 import radoData from './data/brands/rado';
 import tissotData from './data/brands/tissot';
+import Career from './pages/Career';
 import ComingSoon from './pages/ComingSoon';
 import './styles/global.css';
 
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/longines-watch-repair" element={<BrandRepairPage brand={longinesData} />} />
           <Route path="/rado-watch-repair" element={<BrandRepairPage brand={radoData} />} />
           <Route path="/tissot-watch-repair" element={<BrandRepairPage brand={tissotData} />} />
+          <Route path="/career" element={<Career />} />
           <Route path="*" element={<ComingSoon />} />
         </Routes>
 

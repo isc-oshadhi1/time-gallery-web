@@ -1,0 +1,193 @@
+/* ===================================================================
+   CAREER PAGE STYLING
+   =================================================================== */
+
+.career-page-main {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* 1. Top left Heading: Career with us (left 282px, center 204px) */
+.career-top-heading {
+  position: absolute;
+  left: 282px;
+  top: 28px;
+  width: 154px;
+  height: 26px;
+  margin: 0;
+  padding: 0;
+  font-family: 'Prompt', var(--font-semi-condensed), sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 26px;
+  color: #ff0000;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
+  white-space: nowrap;
+}
+
+/* 2. Banner: 600 x 228, centered, top at 217px */
+.career-banner-container {
+  width: 600px;
+  height: 228px;
+  margin: 54px auto 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.career-banner-image {
+  width: 600px;
+  height: 228px;
+  display: block;
+  object-fit: cover;
+}
+
+/* Content Section below banner */
+.career-content-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* 3. A career with us! (font Oswald 700, size ~239px wide, center at 522px) */
+.career-hero-heading {
+  font-family: 'Oswald', var(--font-condensed), Impact, sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  color: #ff0000;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.35);
+  text-align: center;
+  margin: 57px 0 0 0;
+  padding: 0;
+  line-height: 42px;
+  height: 42px;
+}
+
+/* 4. Paragraph (Arial bold 15px, centered, text-shadow 1px 2px 3px rgba(0,0,0,0.3), center at 565px) */
+.career-hero-paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  margin: 13px 0 0 0;
+  padding: 0;
+  line-height: 18px;
+  white-space: nowrap;
+}
+
+/* 5. Two lines inside one h2 (line 1 center at 601px, line 2 center at 617px) */
+.career-subheading-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 19px 0 0 0;
+  padding: 0;
+}
+
+.career-subheading-line1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  line-height: 15px;
+}
+
+.career-subheading-line2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 16px;
+  margin-top: 1px;
+  white-space: nowrap;
+}
+
+/* 6 & 7. Form section starting with 'Work with Us' (left 514px, center at 678px) */
+.career-form-section {
+  width: 509px;
+  margin: 41px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.career-work-heading {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 19px;
+  font-weight: 700;
+  color: #a660e8;
+  margin: 0 0 33px 1px; /* 1px offset to place left at 514px (513 + 1) */
+  padding: 0;
+  line-height: 23px;
+  text-align: left;
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN (below 900px)
+   =================================================================== */
+
+@media (max-width: 899px) {
+  .career-top-heading {
+    position: static;
+    width: 100%;
+    text-align: center;
+    margin: 24px 0 16px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+    white-space: normal;
+  }
+
+  .career-banner-container {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    aspect-ratio: 600 / 228;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .career-banner-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 600 / 228;
+  }
+
+  .career-hero-heading {
+    margin-top: 30px;
+    font-size: 28px;
+    height: auto;
+    line-height: normal;
+  }
+
+  .career-hero-paragraph {
+    margin-top: 15px;
+    padding: 0 20px;
+    white-space: normal;
+    line-height: 1.5;
+  }
+
+  .career-subheading-block {
+    margin-top: 15px;
+    padding: 0 20px;
+  }
+
+  .career-subheading-line2 {
+    white-space: normal;
+    margin-top: 6px;
+  }
+
+  .career-form-section {
+    width: 100%;
+    margin-top: 25px;
+  }
+
+  .career-work-heading {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+}

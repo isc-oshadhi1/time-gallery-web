@@ -1,0 +1,382 @@
+/* ===================================================================
+   CAREER APPLICATION FORM
+   Width 509px, Courier New monospace, purple border & offset shadow
+   =================================================================== */
+
+.career-form {
+  width: 509px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Base input, select, textarea styling */
+.career-input,
+.career-select,
+.career-textarea {
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid #a96be6;
+  box-shadow: -5px 5px 0 #c28be6;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #222222;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.career-input::placeholder,
+.career-textarea::placeholder {
+  color: #222222;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.career-input:focus,
+.career-select:focus,
+.career-textarea:focus {
+  border-color: #7b3fc4;
+}
+
+.career-input--error {
+  border-color: #ff0000;
+}
+
+/* Inline error */
+.career-inline-error {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ff0000;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Form Rows */
+.career-form-row {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.career-form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Row 1: Names (top: 723px, height: 54px) */
+.career-form-row--names {
+  height: 54px;
+  gap: 11px;
+}
+
+.career-form-field--first-name {
+  width: 242px;
+  height: 54px;
+}
+
+.career-form-field--first-name .career-input {
+  width: 242px;
+  height: 54px;
+  padding: 0 15px;
+}
+
+.career-form-field--last-name {
+  width: 256px;
+  height: 54px;
+}
+
+.career-form-field--last-name .career-input {
+  width: 256px;
+  height: 54px;
+  padding: 0 15px;
+}
+
+/* Row 2: E-mail (top: 827px, height: 54px, gap from Row 1 = 50px) */
+.career-form-row--email {
+  margin-top: 50px;
+  height: 54px;
+}
+
+.career-form-field--full {
+  width: 509px;
+  height: 54px;
+}
+
+.career-form-field--full .career-input {
+  width: 509px;
+  height: 54px;
+  padding: 0 15px;
+}
+
+/* Row 3: Phone & Source (top: 906px, height: 54px, gap from Row 2 = 25px) */
+.career-form-row--phone-source {
+  margin-top: 25px;
+  height: 54px;
+  gap: 24px;
+}
+
+.career-form-field--phone {
+  width: 219px;
+  height: 54px;
+}
+
+.career-form-field--phone .career-input {
+  width: 219px;
+  height: 54px;
+  padding: 0 15px;
+}
+
+.career-form-field--source {
+  width: 266px;
+  height: 54px;
+}
+
+.career-select-wrapper {
+  position: relative;
+  width: 266px;
+  height: 54px;
+}
+
+.career-select {
+  width: 266px;
+  height: 54px;
+  padding: 0 35px 0 15px;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.career-select-arrow {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fieldset: Days (margin-top: 51px) */
+.career-fieldset {
+  margin: 51px 0 0 0;
+  padding: 0;
+  border: none;
+}
+
+.career-legend {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 0 30px; /* Aligns left edge at 543px (513 + 30) */
+  padding: 0;
+  line-height: 14px;
+}
+
+.career-days-row {
+  display: flex;
+  margin-top: 14px;
+  margin-left: 27px; /* Aligns first checkbox left edge at 540px (513 + 27) */
+  align-items: center;
+}
+
+.career-day-item {
+  display: flex;
+  align-items: center;
+  width: 71px; /* Exact 71px pitch between items */
+  cursor: pointer;
+  user-select: none;
+}
+
+.career-checkbox-custom {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #a96be6;
+  box-shadow: -3px 3px 0 #c28be6;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease;
+}
+
+.career-checkbox-native:focus-visible + .career-checkbox-custom {
+  outline: 2px solid #7b3fc4;
+  outline-offset: 2px;
+}
+
+.career-checkmark {
+  width: 16px;
+  height: 16px;
+}
+
+.career-day-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  margin-left: 7px;
+}
+
+/* A few words about you (margin-top: 27px) */
+.career-form-row--about-you {
+  margin-top: 27px;
+  flex-direction: column;
+}
+
+.career-textarea-label {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 13px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  line-height: 14px;
+}
+
+.career-textarea {
+  width: 509px;
+  height: 125px;
+  margin-top: 16px;
+  padding: 12px 15px;
+  resize: none;
+  line-height: 1.4;
+}
+
+/* Submit Button Container (margin-top: 31px, bottom margin to footer: 81px) */
+.career-button-container {
+  margin-top: 31px;
+  margin-bottom: 81px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.career-submit-button {
+  width: 251px;
+  height: 38px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid #a96be6;
+  box-shadow: -14px 14px 0 #c47fe0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  font-weight: 700;
+  color: #000000;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.career-submit-button:hover:not(:disabled) {
+  box-shadow: -10px 10px 0 #c47fe0;
+  transform: translate(-4px, 4px);
+}
+
+.career-submit-button:focus-visible {
+  outline: 2px solid #7b3fc4;
+  outline-offset: 2px;
+}
+
+.career-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.career-success-message {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2e7d32;
+  text-align: center;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+/* ===================================================================
+   RESPONSIVE DESIGN (below 900px)
+   =================================================================== */
+
+@media (max-width: 899px) {
+  .career-form {
+    width: 100%;
+    max-width: 509px;
+    padding: 0 20px;
+  }
+
+  .career-form-row--names,
+  .career-form-row--phone-source {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .career-form-field--first-name,
+  .career-form-field--first-name .career-input,
+  .career-form-field--last-name,
+  .career-form-field--last-name .career-input,
+  .career-form-field--full,
+  .career-form-field--full .career-input,
+  .career-form-field--phone,
+  .career-form-field--phone .career-input,
+  .career-form-field--source,
+  .career-select-wrapper,
+  .career-select,
+  .career-textarea {
+    width: 100%;
+  }
+
+  .career-form-row--email {
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .career-form-row--phone-source {
+    margin-top: 20px;
+  }
+
+  .career-fieldset {
+    margin-top: 30px;
+  }
+
+  .career-legend {
+    margin-left: 0;
+  }
+
+  .career-days-row {
+    margin-left: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 10px;
+  }
+
+  .career-day-item {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .career-form-row--about-you {
+    margin-top: 25px;
+  }
+
+  .career-button-container {
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .career-submit-button {
+    width: 100%;
+    max-width: 251px;
+  }
+}
